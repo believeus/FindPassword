@@ -11,4 +11,12 @@
 	position:absolute;
 	margin-left:-480px;
 }
+span{
+	color: #333333;
+    font-family: 'Arial Normal','Arial';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
