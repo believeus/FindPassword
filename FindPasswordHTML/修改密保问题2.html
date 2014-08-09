@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="resources/css/common.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>修改密保问题</title>
 <style type="text/css">
 #set{
 	margin-left:30px;
@@ -54,28 +54,35 @@
 </head>
 <body>
 	<div id="container">
-    <div id=set><span>设置密保问题：</span></div>
+    <form method="post" action="#">
+    <div id=set>
+    	<span>设置密保问题：</span>
+     </div>
     <div id="img">
-    <span><img src="resources\images\Modifyproblem\1.png"/>
-    </span><span><img src="resources\images\Modifyproblem\2.png"/>
-    </span><span><img src="resources\images\Modifyproblem\3.png"/>
-    <span><img src="resources\images\Modifyproblem\4.png"/></span>
-    </span></div>
-    <div id=tishi><span>为了避免遗忘，请您填写真实信息，这将帮助您以后通过回答问题快速找回登录密码：</span></div>
-    <div id="problem"><span>问题：</span>
-    <select class="pm">
-    <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
-    <option value="您最熟悉的童年好友名字是？"><span>您最熟悉的童年好友名字是？   </span></option>
-    </select>
+       <span><img src="resources\images\Modifyproblem\1.png"/></span>
+       <span><img src="resources\images\Modifyproblem\2.png"/></span>
+       <span><img src="resources\images\Modifyproblem\3.png"/></span>
+       <span><img src="resources\images\Modifyproblem\4.png"/></span>
     </div>
-    <div id="answer"><span>答案：</span>
-    <input id="ans" style="font-color:#DOD1CC" type="text" value="1-10个中文或2-30个英文"/>
+    <div id=tishi>
+     <span>为了避免遗忘，请您填写真实信息，这将帮助您以后通过回答问题快速找回登录密码：</span>
+    </div>
+    <div id="problem">
+     <span>问题：</span>
+     <select class="pm">
+       <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
+       <option value="您最熟悉的童年好友名字是？"><span>您最熟悉的童年好友名字是？</span></option>
+     </select>
+    </div>
+    <div id="answer">
+      <span>答案：</span>
+      <input id="ans" style="font-color:#DOD1CC" type="text" value="1-10个中文或2-30个英文"/>
     </div>
     <div id="step">
-    <input class="st" type="submit" value="上一步"/>&nbsp;&nbsp;&nbsp;&nbsp;<input class="st2" type="submit" value="下一步"/>
-    </div>
-
+      <input class="st" type="button" value="上一步" onclick="history.go(-1)"/>&nbsp;&nbsp;&nbsp;&nbsp;<input class="st2" type="submit" value="下一步"/>
     </div>
     </div>
+    </form>
+   </div>
 </body>
 </html>
