@@ -1,0 +1,14 @@
+// clone 项目
+git clone https://github.com/believeus/FindPassword.git
+
+// 让git支持中文
+git config core.quotepath false
+
+// 让git有颜色提示
+git config --global color.ui auto
+
+// 让git知道提交人的姓名
+git config --global user.name "填写你的名字"
+
+// 让git知道提交人的邮箱
+git config --global user.email 填写你的email
