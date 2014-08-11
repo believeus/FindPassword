@@ -5,20 +5,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>找回密码第三步</title>
 
+<style type="text/css">
+	#set{
+		margin-top:30px;
+	}
+	
+    #image{
+	      margin-top:50px
+	      }
+	#content{
+		border:1px;
+		margin-left:340px; 
+		margin-top:30px;
+		}
+	#password{
+		margin-top:40px;
+			}
+	.text{
+		width:200px; 
+		height:25px;
+		}
+	#newp{
+		margin-top:30px;
+		}
+	.newpsw{
+			margin-top:30px;
+			height:25px;
+			}
+	#sub{
+		margin-top:30px; 
+		margin-left:84px;
+		
+		}
+	.value{
+		width:102px;
+		height:25px;
+		}
+</style>
 </head>
 <body>
       <div id="container">
-      	<div style="margin-top:100px"><img src="resources/images/findpassword/25.png"/></div>
+      <div id="set"><span>找回密码：</span></div>
+      	<div id="image"><img src="resources/images/findpassword/3.png"/></div>
         <form method="post" action="找回密码4.html">
-         <div border="1px" style="margin-left:20%; margin-top:2%">
-            <div style="margin-top:30px;">
+         <div id="content">
+            <div class="password">
               <span>新登录密码：</span>
-              <input style="width:200px; height:20px;"/>
+              <input class="text" type="text"/>
             </div>
-            <div style="margin-top:20px">
-              <span>确认新密码：</span><input style="width:200px; height:20px; margin-left:8px;"/>
+            <div class="newpsw">
+              <span>确认新密码：</span>
+              <input class="text" type="text"/>
             </div>
-            <div style=" margin-top:30px; margin-left:85px;"><input style="width:102px;" type="submit" value="提交"/></div>
+            
+            <div id="sub"><input class="value" type="submit" value="提交"/></div>
          </div>
         </form>
 </body>

@@ -4,27 +4,69 @@
 <link rel="stylesheet" type="text/css" href="resources/css/common.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>找回密码第二步</title>
-
+<style type="text/css">
+	#set{
+		margin-top:30px;
+	}
+	
+    #image{
+	      margin-top:50px
+	}
+	
+    #content{
+		width:278px;
+		height:320px;
+		margin-top:30px;
+		margin-left:340px;
+		}
+		#select{
+			margin-top:30px;
+			width:230px; 
+			height:25px;
+			cursor:pointer;
+			}
+		#ans{
+			margin-top:30px;
+			}
+		.answer{
+			width:226px;
+			height:25px;
+			color: #999999;
+			}
+		.next{
+			margin-top:30px; 
+			margin-left:45px;
+			}
+		#value{
+			width:102px;
+			height:25px;
+			}
+    
+</style>
 </head>
 <body>
       <div id="container">
-      	<div style="margin-top:100px"><img src="resources/images/findpassword/24.png"/></div>
+      <div id="set"><span>找回密码：</span></div>
+      	<div id="image"><img src="resources/images/findpassword/2.png"/></div>
         <form method="post" action="找回密码3.html">
-         <div border="1px" style="margin-left:20%; margin-top:2%">
-         	<div>
-              <span style="color:#FD7628">请回答密保问题。</span>
-            </div>
-            <div style="margin-top:30px;">
-              <span>问题：</span>
-              <select style="width:200px; height:25px;">
-              	<option>请选择密保问题</option>
-              </select>
-            </div>
-            <div style="margin-top:20px">
-              <span>答案：</span><input style="width:198px;margin-left: 8px;height:20px;" />
-            </div>
-            <div style=" margin-top:30px; margin-left:45px;"><input style="width:102px;" type="submit" value="下一步"/></div>
+         <div id="content">
+                  <span>请回答密保问题。</span>
+                  <div>
+                  <span>问题：</span>
+                  <select id="select" >
+              	  <option>请选择密保问题</option>
+                  <option>您最熟悉的童年好友名字是？</option>
+                  </select>
+                  </div>
+                  <div id="ans">
+                  <span>答案：</span>
+                  <input class="answer" type="text" value="1-10个中文或2-30个英文"/>
+                  </div>
+                  <div class="next"><input id="value" type="submit" value="下一步"/></div>
+
          </div>
-        </form>
+     </div>        
+       </form>
+        
 </body>
 </html>

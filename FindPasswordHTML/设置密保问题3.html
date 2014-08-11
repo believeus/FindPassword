@@ -5,9 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/common.css"/>
 	<title>设置密保问题3</title>
     <style type="text/css">
+		#center1{
+			width:690px;
+			left:50%;
+			position:relative;
+			margin-left:-345px;
+		}
+		.setpassword,.question{
+			margin-top:35px;
+		}
+		.setimage,.tips{
+			margin-top:30px;
+		}
 	
 		#center{
-			margin-top:150px;
+			margin-top:50px;
 		}
 	
 		.save{
@@ -48,6 +60,15 @@
 <body>
 <div id="container">
 	<form method="post" action="#">
+    <div id="center1">
+        <div class="setpassword"><span>设置密保问题：</span></div>
+        
+        <div class="setimage">
+        	<img src="resources/images/settingQuestion/1.png"/>
+            <img src="resources/images/settingQuestion/5.png"/>
+            <img src="resources/images/settingQuestion/6.png"/>
+        </div>
+     </div>
         <div id="center">
             <div class="save"><img src="resources/images/settingQuestion/save.png"/></div>
             
@@ -55,6 +76,7 @@
 
             <div class="return"><input type="submit" value="返回首页"/></div>
         </div>
+        
     </form>
 </div>
 </body>
