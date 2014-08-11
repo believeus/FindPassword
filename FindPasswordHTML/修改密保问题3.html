@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="resources/css/common.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改密保问题3</title>
+<style type="text/css">
+#set{
+	margin-left:30px;
+	margin-top:30px;
+	font:13px;
+	
+	}
+#img{
+	margin-left:30px;
+	margin-top:50px;
+	margin-left:30px;
+	
+	}
+#tishi{
+	margin-left:274px;
+	margin-top:35px;
+	font:13px;
+	
+	}
+#problem{
+	margin-left:330.5px;
+	margin-top:35px;
+	}
+.pm{
+	width:210px;
+	cursor:pointer;
+	}
+#answer{
+	margin-left:330.5px;
+	margin-top:35px;
+	}
+
+#ans{
+	width:205px;
+	color: #999999;
+	}
+
+#step{
+	margin-left:377.5px;
+	margin-top:35px;
+	}
+.st,.st2{
+	width:90px;
+	cursor:pointer;
+	}
+</style>
+</head>
+<body>
+	<div id="container">
+    <form method="post" action="修改密保问题4.html">
+    <div id=set>
+    	<span>设置密保问题：</span>
+     </div>
+    <div id="img">
+       <span><img src="resources\images\Modifyproblem\1.png"/></span>
+       <span><img src="resources\images\Modifyproblem\9.png"/></span>
+       <span><img src="resources\images\Modifyproblem\10.png"/></span>
+       <span><img src="resources\images\Modifyproblem\4.png"/></span>
+    </div>
+    <div id=tishi>
+     <span>以下是您刚刚设置的密保问题，请依次做出回答，以便进行确认。</span>
+    </div>
+    <div id="problem">
+     <span>问题：</span>
+     <select class="pm">
+       <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
+       <option value="您最熟悉的童年好友名字是？"><span>您最熟悉的童年好友名字是？</span></option>
+     </select>
+    </div>
+    <div id="answer">
+      <span>答案：</span>
+      <input id="ans" style="font-color:#DOD1CC" type="text" value="1-10个中文或2-30个英文"/>
+    </div>
+    <div id="step">
+      <input class="st" type="button" value="上一步" onclick="history.go(-1)"/>&nbsp;&nbsp;&nbsp;&nbsp;<input class="st2" type="submit" value="下一步"/>
+    </div>
+    </div>
+    </form>
+   </div>
+</body>
+</html>

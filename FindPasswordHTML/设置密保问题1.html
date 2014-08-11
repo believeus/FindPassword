@@ -8,32 +8,40 @@
 		#center1{
 			width:690px;
 			left:50%;
-			position:absolute;
+			position:relative;
 			margin-left:-345px;
 		}
 		
-		#center2{
-			width:400px;
+		.tips{
+			width:540px;
 			left:50%;
-			position:absolute;
-			margin-left:-200px;
+			position:relative;
+			margin-left:-270px;
+		}
+		
+		#center2{
+			width:320px;
+			left:50%;
+			position:relative;
+			margin-left:-160px;
 		}
 		
     	.setpassword,.question{
-			margin-top:30px;
+			margin-top:35px;
 		}
 		
 		.setimage,.tips{
-			margin-top:15px;
+			margin-top:30px;
 		}
 		
 		.question select{
 			width:250px;
 			height:25px;
+			cursor:pointer;
 		}
 		
 		.answer{
-			margin-top:30px;
+			margin-top:35px;
 		}
 		
 		.answer input{
@@ -43,13 +51,14 @@
 		}
 		
 		.next{
-			margin-top:30px;
-			margin-left:51px;
+			margin-top:35px;
+			margin-left:38px;
 		}
 		
 		.next input{
 			width:100px;
 			height:25px;
+			cursor:pointer;
 			font-weight:bold;
 		}
     </style>
@@ -62,16 +71,16 @@
         <div class="setpassword"><span>设置密保问题：</span></div>
         
         <div class="setimage">
-        	<image src="resources/images/settingQuestion/setquestion1.1.png"></image>
-            <image src="resources/images/settingQuestion/setquestion1.2.png"></image>
-            <image src="resources/images/settingQuestion/setquestion1.3.png"></image>
+        	<img src="resources/images/settingQuestion/4.png"/>
+            <img src="resources/images/settingQuestion/5.png"/>
+            <img src="resources/images/settingQuestion/3.png"/>
         </div>
         
         <div class="tips"><span>为了避免遗忘，请您填写真实信息，这将帮助您以后通过回答问题快速找回登录密码。</span></div>
         
         <div id="center2">
             <div class="question">
-                <span>问题一：</span><select>
+                <span>问题：</span><select>
                     <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
                     <option value="您母亲的姓名是？"><span>您母亲的姓名是？</span></option>
                     <option value="您配偶的生日是？"><span>您配偶的生日是？</span></option>
@@ -86,49 +95,12 @@
                     <option value="对您影响最大的人名字是？"><span>对您影响最大的人名字是？</span></option>
                 </select>
             </div>
-            <div class="answer"><span>答案一：</span><input type="text" value="1-10个中文或2-30个英文"/></div>
-            
-            <div class="question">
-                <span>问题二：</span><select>
-                    <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
-                    <option value="您母亲的姓名是？"><span>您母亲的姓名是？</span></option>
-                    <option value="您配偶的生日是？"><span>您配偶的生日是？</span></option>
-                    <option value="您高中班主任的名字是？"><span>您高中班主任的名字是？</span></option>
-                    <option value="您父亲的姓名是？"><span>您父亲的姓名是？</span></option>
-                    <option value="您小学班主任的名字是？"><span>您小学班主任的名字是？</span></option>
-                    <option value="您父亲的生日是？"><span>您父亲的生日是？</span></option>
-                    <option value="您配偶的姓名是？"><span>您配偶的姓名是？</span></option>
-                    <option value="您初中班主任的名字是？"><span>您初中班主任的名字是？</span></option>
-                    <option value="您最熟悉的童年好友名字是？"><span>您最熟悉的童年好友名字是？</span></option>
-                    <option value="您最熟悉的学校宿舍室友名字是？"><span>您最熟悉的学校宿舍室友名字是？</span></option>
-                    <option value="对您影响最大的人名字是？"><span>对您影响最大的人名字是？</span></option>
-                </select>
-            </div>
-            <div class="answer"><span>答案二：</span><input type="text" value="1-10个中文或2-30个英文"/></div>
-            
-            <div class="question">
-                <span>问题三：</span><select>
-                    <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
-                    <option value="您母亲的姓名是？"><span>您母亲的姓名是？</span></option>
-                    <option value="您配偶的生日是？"><span>您配偶的生日是？</span></option>
-                    <option value="您高中班主任的名字是？"><span>您高中班主任的名字是？</span></option>
-                    <option value="您父亲的姓名是？"><span>您父亲的姓名是？</span></option>
-                    <option value="您小学班主任的名字是？"><span>您小学班主任的名字是？</span></option>
-                    <option value="您父亲的生日是？"><span>您父亲的生日是？</span></option>
-                    <option value="您配偶的姓名是？"><span>您配偶的姓名是？</span></option>
-                    <option value="您初中班主任的名字是？"><span>您初中班主任的名字是？</span></option>
-                    <option value="您最熟悉的童年好友名字是？"><span>您最熟悉的童年好友名字是？</span></option>
-                    <option value="您最熟悉的学校宿舍室友名字是？"><span>您最熟悉的学校宿舍室友名字是？</span></option>
-                    <option value="对您影响最大的人名字是？"><span>对您影响最大的人名字是？</span></option>
-                </select>
-            </div>
-            <div class="answer"><span>答案三：</span><input type="text" value="1-10个中文或2-30个英文"/></div>
+            <div class="answer"><span>答案：</span><input type="text" value="1-10个中文或2-30个英文"/></div>
             
             <div class="next"><input type="submit" value="下一步"/></div>
-          
         </div>
     </div>
-     </form>
+    </form>
 </div>
 </body>
 </html>

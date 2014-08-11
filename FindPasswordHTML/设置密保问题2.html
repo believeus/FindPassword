@@ -8,27 +8,40 @@
 		#center1{
 			width:690px;
 			left:50%;
-			position:absolute;
+			position:relative;
 			margin-left:-345px;
 		}
 		
-		#center2{
+		.tips{
 			width:400px;
 			left:50%;
-			position:absolute;
+			position:relative;
 			margin-left:-200px;
 		}
 		
+		#center2{
+			width:320px;
+			left:50%;
+			position:relative;
+			margin-left:-160px;
+		}
+		
     	.setpassword,.question{
-			margin-top:30px;
+			margin-top:35px;
 		}
 		
 		.setimage,.tips{
-			margin-top:15px;
+			margin-top:30px;
+		}
+		
+		.question select{
+			width:250px;
+			height:25px;
+			cursor:pointer;
 		}
 		
 		.answer{
-			margin-top:30px;
+			margin-top:35px;
 		}
 		
 		.answer input{
@@ -37,13 +50,14 @@
 		}
 		
 		.updown{
-			margin-top:30px;
-			margin-left:51px;
+			margin-top:35px;
+			margin-left:38px;
 		}
 		
 		.updown input{
 			width:100px;
 			height:25px;
+			cursor:pointer;
 			font-weight:bold;
 		}
     </style>
@@ -51,31 +65,40 @@
 
 <body>
 <div id="container">
-	<form method="post" action="#">
+    <form method="post" action="设置密保问题3.html">
 	<div id="center1">
         <div class="setpassword"><span>设置密保问题：</span></div>
         
         <div class="setimage">
-        	<image src="resources/images/settingQuestion/setquestion2.1.png"></image>
-            <image src="resources/images/settingQuestion/setquestion2.2.png"></image>
-            <image src="resources/images/settingQuestion/setquestion2.3.png"></image>
+        	<img src="resources/images/settingQuestion/1.png"/>
+            <img src="resources/images/settingQuestion/2.png"/>
+            <img src="resources/images/settingQuestion/3.png"/>
         </div>
         
         <div class="tips"><span>以下是您刚刚设置的密保问题，请依次做出回答，以便进行确认。</span></div>
         
         <div id="center2">
-            <div class="question"><span>问题一：您的学号(或工号)是？</span></div>
-            <div class="answer"><span>答案一：</span><input type="text"/></div>
-            
-            <div class="question"><span>问题二：您初中班主任的名字？</span></div>
-            <div class="answer"><span>答案二：</span><input type="text"/></div>
-            
-            <div class="question"><span>问题三：您高中班主任的名字？</span></div>
-            <div class="answer"><span>答案三：</span><input type="text"/></div>
+            <div class="question">
+                <span>问题：</span><select>
+                    <option value="请选择密保问题" selected=""><span>请选择密保问题</span></option>
+                    <option value="您母亲的姓名是？"><span>您母亲的姓名是？</span></option>
+                    <option value="您配偶的生日是？"><span>您配偶的生日是？</span></option>
+                    <option value="您高中班主任的名字是？"><span>您高中班主任的名字是？</span></option>
+                    <option value="您父亲的姓名是？"><span>您父亲的姓名是？</span></option>
+                    <option value="您小学班主任的名字是？"><span>您小学班主任的名字是？</span></option>
+                    <option value="您父亲的生日是？"><span>您父亲的生日是？</span></option>
+                    <option value="您配偶的姓名是？"><span>您配偶的姓名是？</span></option>
+                    <option value="您初中班主任的名字是？"><span>您初中班主任的名字是？</span></option>
+                    <option value="您最熟悉的童年好友名字是？"><span>您最熟悉的童年好友名字是？</span></option>
+                    <option value="您最熟悉的学校宿舍室友名字是？"><span>您最熟悉的学校宿舍室友名字是？</span></option>
+                    <option value="对您影响最大的人名字是？"><span>对您影响最大的人名字是？</span></option>
+                </select>
+            </div>
+            <div class="answer"><span>答案：</span><input type="text"/></div>
             
             <div class="updown">
-                <input class="up"  type="button" value="上一步" onclick="history.go(-1)"/>
-                <input class="down" type="submit" value="下一步"/>
+                <input type="button" value="上一步" onclick="history.go(-1)"/>
+                &nbsp;&nbsp;<input type="submit" value="下一步"/>
             </div>
         </div>
     </div>
