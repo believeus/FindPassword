@@ -222,6 +222,39 @@ $(function(){
 	.qdb-product-1 li {
 		line-height: 30px;
 	}
+	.qdb-tip{
+		padding:0 30px 20px;
+		font-size: 16px;
+	}
+	.qdb-tip li {
+		font-size: 14px;
+		font-weight: bold;
+		line-height:25px;
+		padding-left: 20px;
+		color:#777374;
+	}
+	.qdb-tip span{
+		color:#B1666A;
+		font-weight:bold;
+		//font-family: 圆幼;
+		line-height:20px;
+	}
+	.qdb-jiajian{
+		border: 1px solid #bebebe;
+		display: inline-block;
+		text-align: center;
+		width: 20px;
+		margin-right: 5px;
+	}
+	.qdb-yuandian{
+		background: #f4ced9;
+		border-radius: 10px;
+		float: left;
+		height: 15px;
+		margin-right: 10px;
+		margin-top: 4px;
+		width: 15px;
+	}
 </style>
 </head>
 
@@ -290,9 +323,9 @@ $(function(){
 					</p>
 					<p class="qdb-pro-img-pri-yunfei-p">
 						数量：
-						<span style="border: 1px solid #bebebe;display: inline-block;text-align: center;width: 20px;margin-right: 5px;">-</span>
+						<span class="qdb-jiajian">-</span>
 						<span style="border: 1px solid #bebebe;display: inline-block;text-align: center;width: 50px;margin-right: 5px;">1</span>
-						<span style="border: 1px solid #bebebe;display: inline-block;text-align: center;width: 20px;margin-right: 5px;;">+</span>
+						<span class="qdb-jiajian">+</span>
 						<span style="margin-left: 15px;">有货</span>
 					</p>
 				</div>
@@ -311,6 +344,7 @@ $(function(){
 		<img src="pic/proDis.jpg" width="750">
 		<div class="qdb-product">
 			<div class="qdb-product-1">
+				<div class="qdb-yuandian"></div>
 				<span style="font-weight: bold; font-size: 20px;">商品详情表</span>
 				<ul style="padding-left: 25px; padding-top:20px; font-size: 15px; font-weight: bold;">
 					<li>商品名称：可爱笑脸 卷纸巾抽</li>
@@ -328,12 +362,25 @@ $(function(){
 				<div style="width: 220px; text-align: right;">(手工测量，存在1-2cm误差)</div>
 			</div>
 			<div style="float:left;padding: 0 15px 20px;">
+				<div class="qdb-yuandian"></div>
 				<span style="font-size: 20px; font-weight: bold;">商品描述</span><br/>
 				<div style="margin-top: 20px; margin-left: 23px; font-weight: bold; font-size: 15px;">让我装饰你们的生活吧。。。</div>
 			</div>
 		</div>
-		<div style="width:625px;margin:40px auto 0;">
-			<img src="pic/test1.jpg">
+		<div class="qdb-product" style="margin-top: 20px;">
+			<p style="margin: 15px;">
+				<span style="color:red;font-size:20px;font-weight:bold;">温馨提示：</span>
+			</p>
+			<ul class="qdb-tip" style="">
+				<span>·使用步骤</span>
+				<li>1.取出胶袋内的配件，将4只小撑脚装入底座。（装入时，对好缝口，轻轻旋转按压）</li>
+				<li>2.将纸巾装入双耳的转动轴内，并将双耳放置在底座卡槽的位置。</li>
+				<li>3.将纸巾的最前端拉出，放入白色笑脸板的口中拉出。</li>
+				<li>4.将面板放置在底座的卡槽当中，合上上盖，当听到“啪”的声响后，表示上下盖已经合好。</li>
+				<li>5.在使用过程中，如拉出过长，可以顺时针转动双耳，将纸巾收回箱体。</li>
+				<span>·如何更换纸巾</span>
+				<li>用大拇指按压纸巾轴下身背面正中，扣位轻轻弹开，上下盖即可轻松分开，按照上2至5步骤操作，即可轻松置换纸巾了。</li>
+			</ul>
 		</div>
 		<div style="width:625px;margin:40px auto 0;">
 			<img src="pic/product2.jpg">
