@@ -188,25 +188,104 @@ $(function(){
 </div>
 
 <div class="content" style="border:1px solid #e4e4e4;font-size:17px;margin-top:20px;">
-	<div class="qdb-area">
+	<div class="qdb-area" id="menu-one">
 		<span style="float:left;"> 分类：</span>
 		<ul class="border">
-            <li><a href="#">全部</a></li>
-			<li><a href="#">服装鞋帽</a></li>
-			<li><a href="#">家居家装</a></li>
-			<li><a href="#">生活家电</a></li>
-			<li><a href="#">个护化妆</a></li>
-			<li><a href="#">运动户外</a></li>
-			<li><a href="#">母婴玩具</a></li>
-			<li><a href="#">钟表首饰</a></li>
-			<li><a href="#">箱包礼品</a></li>
-			<li><a href="#">饰品保健</a></li>
+            <li><a style="background:#FF4B00" href="javascript:void(0)" value="sore-1-1">全部</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-2">服装鞋帽</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-3">家居家装</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-4">生活家电</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-5">个护化妆</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-6">运动户外</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-7">母婴玩具</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-8">钟表首饰</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-9">箱包礼品</a></li>
+			<li><a href="javascript:void(0)" value="sort-1-10">饰品保健</a></li>
 		</ul>
 	</div>
+    <script>
+    	$(function(){
+			$("#menu-two div").hide();
+			$(".border li a").click(function(){
+	            $("#menu-two div").hide();
+			    $(".border li a").css("background","");
+				var id=($(this).attr("value"));
+				$( "#"+id).show();
+				$(this).css("background","#FF4B00");
+				$("#menu-two div span").css("background","");
+				$("#"+id+" span:first").css("background","#FF4B00");
+			});
+			
+			$("#menu-two div span").click(function(){
+		     	$("#menu-two div span").css("background","");
+				$(this).css("background","#FF4B00");
+		    });
+		});
+    </script>
+    <style>
+    	#menu-two{
+			margin-left:120px;
+			margin-top:10px;
+		}
+		#menu-two div{
+			border:1px  solid;
+			width:auto;
+			border-color:#CCC;
+			height: 30px;
+			line-height: 30px;
+        }
+		#menu-two div span{
+			margin-left:20px;
+			color:#666;
+			font:12px/150% Arial,Verdana,"宋体";
+		}
+		#menu-two div span:hover{
+			cursor:pointer;
+		}
+    </style>
+    <div id="menu-two">
+      <div id="sort-1-2">
+      	<span>全部</span><span>服装鞋帽</span><span>服装鞋帽</span><span>服装鞋帽</span><span>服装鞋帽</span><span>服装鞋帽</span>
+        <span>服装鞋帽</span><span>服装鞋帽</span><span>服装鞋帽</span><span>服装鞋帽</span>
+      </div>
+      <div id="sort-1-3">
+      	<span >全部</span><span>家居家装</span><span>家居家装</span><span>家居家装</span><span>家居家装</span><span>家居家装</span>
+        <span>家居家装</span><span>家居家装</span><span>家居家装</span>
+       </div>
+      <div id="sort-1-4">
+      	<span>全部</span><span>生活家电</span><span>生活家电</span><span>生活家电</span><span>生活家电</span><span>生活家电</span>
+        <span>生活家电</span><span>生活家电</span><span>生活家电</span>
+      </div>
+      <div id="sort-1-5">
+      	<span>全部</span><span>个护化妆</span><span>个护化妆</span><span>个护化妆</span><span>个护化妆</span><span>个护化妆</span>
+        <span>个护化妆</span><span>个护化妆</span><span>个护化妆</span>
+      </div>
+      <div id="sort-1-6">
+      	<span>全部</span><span>运动户外</span><span>运动户外</span><span>运动户外</span><span>运动户外</span><span>运动户外</span>
+        <span>运动户外</span><span>运动户外</span><span>运动户外</span>
+      </div>
+      <div id="sort-1-7">
+        <span>全部</span><span>母婴玩具</span><span>母婴玩具</span><span>母婴玩具</span><span>母婴玩具</span><span>母婴玩具</span>
+        <span>母婴玩具</span><span>母婴玩具</span><span>母婴玩具</span>
+      </div>
+      <div id="sort-1-8">
+       <span>全部</span><span>钟表首饰</span><span>钟表首饰</span><span>钟表首饰</span><span>钟表首饰</span><span>钟表首饰</span>
+       <span>钟表首饰</span><span>钟表首饰</span><span>钟表首饰</span>
+      </div>
+      <div id="sort-1-9">
+       <span>全部</span><span>箱包礼品</span><span>箱包礼品</span><span>箱包礼品</span><span>箱包礼品</span><span>箱包礼品</span>
+       <span>箱包礼品</span><span>箱包礼品</span><span>箱包礼品</span>
+      </div>
+      <div id="sort-1-10">
+       <span>全部</span><span>饰品保健</span><span>饰品保健</span><span>饰品保健</span><span>饰品保健</span><span>饰品保健</span>
+       <span>饰品保健</span><span>饰品保健</span><span>饰品保健</span><span>饰品保健</span>
+      </div>
+    </div>
+
 	<div class="qdb-area">
 		<span style="float:left;">价格：</span>
 		<ul class="border">
-			<li><a href="#">全部</a></li>
+			<li style="background:#FF4B00"><a href="#">全部</a></li>
 			<li><a href="#">0-49积分</a></li>
 			<li><a href="#">50-99积分</a></li>
 			<li><a href="#">100-199积分</a></li>
@@ -218,7 +297,7 @@ $(function(){
 	<div class="qdb-area">
 		<span style="float:left;">排序：</span>
 		<ul class="sort">
-			<li class="sort2"><a href="#">默认</a></li>
+			<li style="background:#FF4B00" class="sort2"><a href="#">默认</a></li>
 			<li><a href="#">销量</a></li>
 			<li><a href="#">价格</a></li>
 		</ul>
