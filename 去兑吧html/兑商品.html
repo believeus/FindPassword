@@ -8,6 +8,11 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
+	var isChrome = navigator.userAgent.toLowerCase().match(/chrome/) != null;//判断是否是谷歌浏览器
+	if(isChrome){
+	   //alert("我是谷歌浏览器");
+	   $(".qdb-dw").css("left","350px");
+	}
         var $banner=$('.banner');
         var $banner_ul=$('.banner-img');
         var $btn=$('.banner-btn');
@@ -151,6 +156,20 @@ $(function(){
 		background: #FF4B00;
 		text-decoration: none;
 	}
+	.qdb-dw{
+		background: url("pic/23.gif");
+		height: 46px;
+		position: absolute;
+		top: 83px;
+		width: 252px;
+	}
+	.qdb-dw-dw{
+		height: 30px;
+		left: 30px;
+		position: absolute;
+		top: -10px;
+		width: 190px;
+	}
 </style>
 </head>
 
@@ -268,7 +287,15 @@ $(function(){
     <div class="logo">
       <h1><a href="#"><img src="pic/logo.jpg" /></a></h1>
     </div>
-    <div class="city"><a id="cityname" href="#"><b>北京</b></a><a class="citychangge" href="#">[切换城市]</a></div>
+    <div class="city">
+		<a id="cityname" href="#"><b>北京</b></a>
+		<div class="qdb-dw">
+			<div class="qdb-dw-dw">
+				系统定位您在株洲市，是否<a style="color:#75A2C3;">切换</a>？
+			</div>
+		</div>
+		<a class="citychangge" href="#">[切换城市]</a>
+	</div>
     <div class="header-btn">
       <ul>
         <li><a href="#" class="qdb-header-login">登录</a></li>
@@ -288,7 +315,7 @@ $(function(){
       <li><a href="兑生活.html">兑生活</a></li>
       <li><a href="#">兑品牌</a></li>
       <li><a href="#">兑家装</a></li>
-      <li><a href="#">兑奢华</a></li>
+      <li><a href="#" style="position: relative;">兑奢华<img style="position:absolute;" src="pic/hot.gif"></a></li>
       <li><a href="#">兑明日</a></li>
       <li><a href="#">兑礼品</a></li>
     </ul>
