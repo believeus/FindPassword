@@ -5,6 +5,7 @@
 <title>去兑吧-产品页</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css" />
 <link href="css/h_b_c.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script>
 $(function(){
@@ -99,12 +100,12 @@ $(function(){
 		overflow: hidden;
 	}
 	.qdb-pro-dis{
-		width:750px;
+		width:1200px;
 		height:auto;
 		overflow:hidden;
-		margin-top:30px;
+		margin:30px auto 0;
 		background:#FFFFFF;
-		margin-left: -10px;
+		
 	}
 	.qdb-product{
 		width:625px;
@@ -334,50 +335,68 @@ $(function(){
 		<span>家具家装</span>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;
 		<span>可爱大嘴巴塑料纸盒</span>
 	</p>
-	<div class="qdb-pro-img">
-		<p class="qdb-pro-img-p">
-			可爱大嘴巴纸盒
-			<span class="qdb-pro-img-span">(热销商品)</span>
-		</p>
-		<div class="qdb-pro-img-price">
-			<div class="qdb-pro-img-pic">
-				<img src="pic/proImg.jpg" width="435" height="330">
+
+	<div class="qdb-content-top">
+        <div class="qdb-focus">
+            <div class="qdb-focus-show" style="opacity: 1;">
+                
+                    <a href="#"><img src="pic/fcaef613c927437a826be23ba8fc9686.jpg" id="imageWrap"></a>
+                
+            </div>
+            <div class="qdb-focus-thum">
+                <div class="qdb-slider">
+                    <ul style="position: absolute; left: 0px;" class="slidetabs">
+                        
+                            <li><img onclick="clickimg(this);" src="pic/b2963c7ef2e044e0a9a0cf218fb2b387.jpg" alt="" class="qdb-cur-img"></li>
+                        
+                            <li><img onclick="clickimg(this);" src="pic/fcaef613c927437a826be23ba8fc9686.jpg" alt="" class="qdb-cur-img current"></li>
+                        
+                    </ul>
+                </div>
+                <a class="qdb-thum-left prev left disabled"></a>
+                <a class="qdb-thum-right next right"></a>
+            </div>
+        </div>
+        <div class="qdb-sell">
+            <div class="qdb-sell-title">可爱大嘴巴塑料纸巾盒</div>
+            <div class="qdb-sell-price">
+                <dl>
+                    <dt class="qdb-sell-price1"><strong>积分：</strong>1500</dt>
+                    <dd class="qdb-sell-price2">￥15.00</dd> <!-- 销售价 -->
+                    <dd class="qdb-sell-price3">￥18.00 </dd> <!-- 市场价-->
+                </dl>
+            </div>
+            <div class="qdb-yunfei">
+                <strong>运费：</strong>￥10.00
+            </div>
+            <div class="qdb-sell-num">
+                <strong>数量：</strong>
+                <input type="button" value="-" class="qdb-sell-reduce" id="qdb-sell-reduce">
+
+                <input type="text" onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" onkeyup="checkNum(this)" maxlength="3" class="qdb-sell-txt" value="1" id="qdb-sell-txt">
+                <input type="button" value="+" class="qdb-sell-add" id="qdb-sell-add">
+                
+                
+                    <em>有货</em>
+                
+
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label id="num_error" class="null" style="display: none;"></label>
+            <div style="margin-top: 33px;" class="qdb-sell-btn">
+                <input type="button" value="立即兑换" class="qdb-sell-submit" name="duihuanBtn" id="duihuanBtn"><br/><br/>
+				<span style="color:#999999;">本商品支持在线支付、京豆支付、余额支付等</span>
 			</div>
-			<div class="qdb-pro-img-pri">
-				<div class="qdb-pro-img-pri-jifen">
-					<div style="width:500px;height:50px;padding: 30px 0 0 40px;">
-						<span style="font-weight: bold; font-size: 35px; color: #FFFFFF;">1200
-							<font size="3" weight="normal">积分</font>
-						</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<del style="font-size: 15px;">零售价:199.00</del>&nbsp;&nbsp;|&nbsp;&nbsp;
-						<span style="color: #ffffff; font-size: 15px;">￥166.00</span>
-					</div>
-				</div>
-				<div class="qdb-pro-img-pri-yunfei">
-					<p class="qdb-pro-img-pri-yunfei-p">
-						运费：￥10.00
-					</p>
-					<p class="qdb-pro-img-pri-yunfei-p">
-						数量：
-						<span class="qdb-jiajian">-</span>
-						<span style="border: 1px solid #bebebe;display: inline-block;text-align: center;width: 50px;margin-right: 5px;">1</span>
-						<span class="qdb-jiajian">+</span>
-						<span style="margin-left: 15px;">有货</span>
-					</p>
-				</div>
-				<div class="qdb-duijiang">
-					<a class="qdb-msd" href="#" title="马上兑"></a><br/>
-					<span style="color:#999999;">本商品支持在线支付、京豆支付、余额支付等</span>
-				</div>
-			</div>
-		</div>
-		<p style="margin: 10px 15px; line-height: 30px;">
-			<span>分享到：</span><img src="pic/fenxiang.jpg" style="position:absolute;"/>
-		</p>
-	</div>
+        </div>
+    </div>
 	
 	<div class="qdb-pro-dis">
-		<img src="pic/proDis.jpg" width="750">
+		<div class="qdb-tabs-nav" otop="541" style="position: static; top: 0px;">
+
+            <ul class="tabs">
+                <li class="qdb-cur current">本单详情</li>
+               
+            </ul>
+        </div>
 		<div class="qdb-product">
 			<div class="qdb-product-1">
 				<div class="qdb-yuandian"></div>
@@ -461,5 +480,624 @@ $(function(){
     </div>
   </div>
 </div>
+<script type="text/javascript">
+
+$('#qdb-use-list').hover(function(){
+    $('.qdb-header-btn').css('overflow','visible')
+    $('div.qdb-use-list a.on span').addClass('on');
+},function(){
+    $('.qdb-header-btn').css('overflow','hidden')
+    $('div.qdb-use-list a.on span').removeClass('on');
+});
+
+var loginname_error=$("#loginname_error");
+loginname_error.css("display","none");
+var loginpwd_error=$("#loginpwd_error");
+loginpwd_error.css("display","none");
+var username = $("input[name='mobile']");
+var password = $("input[name='password']");
+var passwords=$("#passwords");
+var repeatPassword=$("input[name='repeatPassword']");
+var repeatPassword_error=$("#repeatPassword_error");
+repeatPassword_error.css("display","none");
+var passwords_error = $("#passwords_error");
+passwords_error.css("display","none");
+var phone_error=$("#phone_error");
+var smsConfirmationCode_error=$("#smsConfirmationCode_error");
+phone_error.css("display","none");
+smsConfirmationCode_error.css("display","none");
+var smsConfirmationCode =$("input[name='smsConfirmationCode']");
+var mobile=$("#phone");
+var bool=false;
+var mobleblooan=false;
+var smsblooan=false;
+var goods=false;
+var smsmodel;
+
+function checkNum(obj){
+
+    if(obj.value<=0){
+        obj.value=1;
+    }
+    var re=/^[1-9]+[0-9]*]*$/;
+    if(!re.test(obj.value)){
+        obj.value=1;
+    }
+}
+
+//表单注册
+function register(){
+
+    var  check_sel=$(".check_sel").attr("checked");
+    if(check_sel=="checked") {
+        if (!mobile.val().match(/^1[3|4|5|8|7][0-9]\d{4,8}$/) || mobile.val().length != 11) {
+            phone_error.css("display", "block");
+            phone_error.html("&nbsp;手机号码格式不正确");
+            return false;
+        }
+        if (smsConfirmationCode.val().length == 0) {
+            smsConfirmationCode_error.css("display", "block");
+            smsConfirmationCode_error.html("&nbsp;请输入短信验证码");
+            return false;
+        }
+        if(smsblooan==true){
+            return false;
+        }
+        if (passwords.val().length == 0) {
+            passwords_error.css("display", "block");
+            passwords_error.html("&nbsp;请输入设置密码");
+            return false;
+        }
+        if(passwords.val().length<6){
+            passwords_error.css("display", "block");
+            passwords_error.html("&nbsp;6-16位字符，可使用字母、数字或符号的组合");
+            return false;
+        }
+        if (repeatPassword.val().length == 0) {
+            repeatPassword_error.css("display", "block");
+            repeatPassword_error.html("&nbsp;请输入确认密码");
+            return false;
+        }else if(repeatPassword.val().length<6){
+            repeatPassword_error.css("display", "block");
+            repeatPassword_error.html("&nbsp;6-16位字符，可使用字母、数字或符号的组合");
+            return false;
+        }
+        else if (repeatPassword.val() != passwords.val()) {
+            repeatPassword_error.css("display", "block");
+            repeatPassword_error.html("&nbsp;两次输入密码不一致");
+            return false;
+        }
+
+        if(smsmodel!=mobile.val()){
+            smsConfirmationCode_error.css("display", "block");
+            smsConfirmationCode_error.html("&nbsp;短信验证码不存在,请重新发送");
+            return false;
+        }
+        return true;
+    }
+    if(check_sel==null){
+        $("#check_sel_error").css("display", "block");
+        $("#check_sel_error").html("请选择去兑吧用户协议");
+        return false;
+    }
+}
+$(".check_sel").click(function(){
+    $("#check_sel_error").css("display", "none");
+})
+$(mobile).blur(function(){
+
+    phone_error.css("display", "none");
+    checkMobile();
+});
+$(passwords).blur(function(){
+
+    passwords_error.css("display", "none");
+});
+$(repeatPassword).blur(function(){
+
+    repeatPassword_error.css("display", "none");
+});
+
+$(smsConfirmationCode).blur(function(){
+
+    smsConfirmationCode_error.css("display", "none");
+    checksmsConfirmat();
+});
+
+//验证激活码是否正确
+function checksmsConfirmat(){
+    if(smsConfirmationCode.val().length!=0) {
+        $.ajax({
+            url: "/member/checkSMS.dhtml",
+            type: "get",
+            data: "sms=" + smsConfirmationCode.val(),
+            dataType: "json",
+            cache: false,
+            success: function (data) {
+
+                if (data == false) {
+                    smsConfirmationCode_error.css("display", "block");
+                    smsConfirmationCode_error.html("&nbsp;验证码不正确");
+                    smsblooan=true;
+                    return false;
+                }else{
+                    smsblooan=false;
+                }
+            }
+        });
+    }
+}
+
+//验证手机号码是否重复
+function checkMobile() {
+    if (mobile.val().length != 0) {
+        $.ajax({
+            url: "/member/isMobileExist.dhtml",
+            type: "get",
+            data: "mobile=" + mobile.val(),
+            dataType: "json",
+            cache: false,
+            success: function (data) {
+
+                if (data == false) {
+                    phone_error.css("display", "block");
+                    phone_error.html("&nbsp;该手机号已注册");
+                    mobleblooan=true;
+                    return false;
+                }
+            }
+        });
+    }
+}
+
+
+
+
+function login() {
+    if (username.val() != "") {
+        var patrn = /^1[3|4|5|8|7][0-9]\d{4,8}$/;
+        if (!patrn.test(username.val())) {
+            //alert("手机号码格式不正确")
+            loginname_error.css("display", "block");
+            loginname_error.html("手机号码格式不正确");
+            username.css("borderColor", "red");
+            return;
+        }
+    } else {
+        loginname_error.css("display", "block");
+        loginname_error.html("请输入手机号码");
+        username.css("borderColor", "red");
+        return;
+    }
+
+    if (password.val() == "") {
+
+        //alert("手机号码格式不正确")
+        loginpwd_error.css("display", "block");
+        loginpwd_error.html("请输入密码");
+        password.css("borderColor", "red");
+        return;
+    }
+    checklogin(username.val(),password.val());
+}
+$("#btn_sub").click(function(){
+    login();
+});
+document.onkeydown=function(event){
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+
+    if(e && e.keyCode==13){ // enter 键
+        login();
+    }
+};
+$("input[name='mobile']").bind("blur",function(){
+    loginname_error.css("display","none");
+    username.css("borderColor","#aaa");
+});
+$("input[name='password']").bind("click",function(){
+    loginpwd_error.css("display","none");
+});
+
+$(function(){
+
+
+    $(".slidetabs li img").click(function() {
+        if ($(this).hasClass("current")) { return; }
+        var url = $(this).attr("src").replace("_t", "");
+        var wrap = $(".qdb-focus-show").show("medium", 0);
+        var img = new Image();
+        img.onload = function() {
+            wrap.fadeTo("fast", 1);
+            wrap.find("img").attr("src", url);
+        };
+        img.src = url;
+        $(".slidetabs li img").removeClass("current");
+        $(this).addClass("current");
+    }).filter(":first").click();
+
+
+
+
+    var imglengh = $('.slidetabs li').children().length;
+    if(imglengh<=5){
+        $('a.backward,a.forward').css('display','none');
+    };
+
+    var stockAvaliableNum=parseInt('4999');
+    var rackType=parseInt('1');
+    if(stockAvaliableNum==0 || rackType==2){ //如果可用库存为0 或者 入库状态时  兑换商品按钮置灰 不可操作
+        $("#duihuanBtn").removeClass('qdb-sell-submit').addClass('qdb-sell-submit-disable');
+        $("#duihuanBtn").attr('disable','disable');
+    }
+    $(".qdb-sell-submit").click(function(){
+        goods=true;
+
+    })
+
+    var loginUser="null";
+    $('.qdb-header-login,.qdb-sell-submit').click(function(){
+
+        if(loginUser!="null"){
+            window.location= "/member/buyGoods.dhtml?goodsID=38&number="+$("#qdb-sell-txt").val();
+        }else {
+            if(parseInt($("#qdb-sell-txt").val())>199){
+                errorShow("#num_error","<font color='red'>兑换数量不能大于199</font>");
+                bool=true;
+                return false;
+            }else if(parseInt($("#qdb-sell-txt").val())>parseInt('4999')){
+                errorShow("#num_error","<font color='red'>库存不足，请修改兑换数量！</font>");
+                bool=true;
+                return false;
+            }
+            if(bool==false) {
+                $('.qdb-login').fadeIn(300);
+                $('.qdb-white-bg').show();
+                $('#loginBtn').addClass("qdb-cur").siblings().removeClass('qdb-cur')
+                $('#loginPanel').show();
+                $('#registerPanel').hide();
+                $('.close').bind("click", function () {
+                    $('.qdb-white-bg').hide();
+                    $('.qdb-login').fadeOut(300);
+                });
+                return false;
+            }
+        }
+
+    })
+
+
+    $("#qdb-sell-txt").bind('blur',function(){
+        errorHide("#num_error");
+        if($("#qdb-sell-txt").val()!=''){
+            var patrn=/^[0-9]*$/;
+            if(!patrn.test($("#qdb-sell-txt").val())){
+                errorShow("#num_error","<font color='red'>兑换数量只能为数字，请填写正确的宝贝数量</font>");
+                bool=true;
+            }else{
+                if(parseInt($("#qdb-sell-txt").val())>199){
+                    errorShow("#num_error","<font color='red'>兑换数量不能大于199</font>");
+                    bool=true;
+                }else if(parseInt($("#qdb-sell-txt").val())>parseInt('4999')){
+                    errorShow("#num_error","<font color='red'>库存不足，请修改兑换数量！</font>");
+                    bool=true;
+                }else{
+                    bool=false;
+                }
+            }
+        }else{
+            errorShow("#num_error","请填写兑换的宝贝数量");
+        }
+    });
+
+    $("#qdb-sell-reduce").bind('click',function(){
+        errorHide("#num_error");
+        if(parseInt($("#qdb-sell-txt").val())<=1){
+            $("#qdb-sell-txt").val(1);
+        }else{
+            var res=parseInt($("#qdb-sell-txt").val())-1;
+            $("#qdb-sell-txt").val(res);
+        }
+    });
+
+    $("#qdb-sell-add").bind('click',function(){
+        errorHide("#num_error");
+        if(parseInt($("#qdb-sell-txt").val())>=199){
+            $("#qdb-sell-txt").val(199);
+        }else{
+            var res=parseInt($("#qdb-sell-txt").val())+1;
+            $("#qdb-sell-txt").val(res);
+        }
+    });
+
+    $('#loginBtn').click(function(){
+        $(this).addClass("qdb-cur").siblings().removeClass('qdb-cur')
+        $('#loginPanel').show();
+        $('#registerPanel').hide();
+    });
+    $('#registerBtn').click(function(){
+        $(this).addClass("qdb-cur").siblings().removeClass('qdb-cur')
+        $('#loginPanel').hide();
+        $('#registerPanel').show();
+    });
+
+    function errorShow(obj,val) {
+        $(obj).html(val);
+        $(obj).show();
+    }
+    function errorHide(obj){
+        $(obj).hide();
+    }
+
+    $("#signup-captcha-img").click(function(){
+        $(this).attr("src","/member/randomCode.dhtml?data="+Math.random());
+    });
+    $("#change_img").click(function(){
+        $("#signup-captcha-img").attr("src","/member/randomCode.dhtml?data="+Math.random());
+    })
+});
+
+function clickimg(obj){
+    $("#imageWrap").attr('src',obj.src);
+    if ($(obj).hasClass("qdb-cur-img")) { return; }
+    $(".qdb-focus-thum img").removeClass("qdb-cur-img");
+    $(obj).addClass("qdb-cur-img");
+}
+
+</script>
+<!--表单验证-->
+<script>
+/*******************************
+ * @author Mr.Think
+ * @author blog http://mrthink.net/
+ * @2011.12.09
+ * @可自由转载及使用,但请注明版权归属
+ *******************************/
+$.fn.iVaryVal=function(iSet,CallBack){
+    /*
+     * Minus:点击元素--减小
+     * Add:点击元素--增加
+     * Input:表单元素
+     * Min:表单的最小值，非负整数
+     * Max:表单的最大值，正整数
+     */
+    iSet=$.extend({Minus:$('.J_minus'),Add:$('.J_add'),Input:$('.J_input'),Min:0,Max:20},iSet);//库存数 最小0 最大20
+    var C=null,O=null;
+    //插件返回值
+    var $CB={};
+    //增加
+    iSet.Add.each(function(i){
+        $(this).click(function(){
+            O=parseInt(iSet.Input.eq(i).val());
+            (O+1<=iSet.Max) || (iSet.Max==null) ? iSet.Input.eq(i).val(O+1) : iSet.Input.eq(i).val(iSet.Max);
+            //输出当前改变后的值
+            $CB.val=iSet.Input.eq(i).val();
+            $CB.index=i;
+            //回调函数
+            if (typeof CallBack == 'function') {
+                CallBack($CB.val,$CB.index);
+            }
+        });
+    });
+    //减少
+    iSet.Minus.each(function(i){
+        $(this).click(function(){
+            O=parseInt(iSet.Input.eq(i).val());
+            O-1<iSet.Min ? iSet.Input.eq(i).val(iSet.Min) : iSet.Input.eq(i).val(O-1);
+            $CB.val=iSet.Input.eq(i).val();
+            $CB.index=i;
+            //回调函数
+            if (typeof CallBack == 'function') {
+                CallBack($CB.val,$CB.index);
+            }
+        });
+    });
+    //手动
+    iSet.Input.bind({
+        'click':function(){
+            O=parseInt($(this).val());
+            $(this).select();
+        },
+        'keyup':function(e){
+            if($(this).val()!=''){
+                C=parseInt($(this).val());
+                //非负整数判断
+                if(/^[1-9]\d*|0$/.test(C)){
+                    $(this).val(C);
+                    O=C;
+                }else{
+                    $(this).val(O);
+                }
+            }
+            //键盘控制：上右--加，下左--减
+            if(e.keyCode==38 || e.keyCode==39){
+                iSet.Add.eq(iSet.Input.index(this)).click();
+            }
+            if(e.keyCode==37 || e.keyCode==40){
+                iSet.Minus.eq(iSet.Input.index(this)).click();
+            }
+            //输出当前改变后的值
+            $CB.val=$(this).val();
+            $CB.index=iSet.Input.index(this);
+            //回调函数
+            if (typeof CallBack == 'function') {
+                CallBack($CB.val,$CB.index);
+            }
+        },
+        'blur':function(){
+            $(this).trigger('keyup');
+            if($(this).val()==''){
+                $(this).val(O);
+            }
+            //判断输入值是否超出最大最小值
+            if(iSet.Max){
+                if(O>iSet.Max){
+                    $(this).val(iSet.Max);
+                }
+            }
+            if(O<iSet.Min){
+                $(this).val(iSet.Min);
+            }
+            //输出当前改变后的值
+            $CB.val=$(this).val();
+            $CB.index=iSet.Input.index(this);
+            //回调函数
+            if (typeof CallBack == 'function') {
+                CallBack($CB.val,$CB.index);
+            }
+        }
+    });
+}
+//调用
+$( function() {
+
+
+
+    $(".slidetabs li img").click(function() {
+        if ($(this).hasClass("current")) { return; }
+        var url = $(this).attr("src").replace("_t", "");
+        var wrap = $(".qdb-focus-show").show("medium", 0);
+        var img = new Image();
+        img.onload = function() {
+            wrap.fadeTo("fast", 1);
+            wrap.find("img").attr("src", url);
+        };
+        img.src = url;
+        $(".slidetabs li img").removeClass("current");
+        $(this).addClass("current");
+    }).filter(":first").click();
+
+
+
+
+    var imglengh = $('.slidetabs li').children().length;
+    if(imglengh<=5){
+        $('a.backward,a.forward').css('display','none');
+    };
+
+    //滚动固定
+    var ie6 = document.all;
+    var dv = $('.qdb-tabs-nav'), st;
+    dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离
+    $(window).scroll(function () {
+        st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+        if (st > parseInt(dv.attr('otop'))) {
+            if (ie6) {//IE6不支持fixed属性，所以只能靠设置position为absolute和top实现此效果
+                dv.css({ position: 'absolute', top: st });
+            }
+            else if (dv.css('position') != 'fixed') dv.css({ 'position': 'fixed', top: 0 });
+        } else if (dv.css('position') != 'static') dv.css({ 'position': 'static' });
+    });
+
+
+
+});
+
+
+var faildCount=0;
+if(faildCount>=3){
+    $("#authImage").show();
+}
+//ajax验证用户名和密码
+function checklogin(user,pwd){
+    $.ajax({
+        url:"/member/login.dhtml",
+        type:"post",
+        data:$(".qdb_login").serialize(),
+        dataType:"json",
+        success:function(data){
+
+            if(!goods){
+
+                window.location.reload();
+            }
+            else if(data.result&& data.message==""){
+                window.location= "/member/buyGoods.dhtml?goodsID=38&number="+$("#qdb-sell-txt").val();
+
+            }else if(data.result){
+                window.location="/member/showActivity.dhtml?id="+data.message;
+            }else{
+                faildCount++;
+                if(faildCount>=3){
+                    $("#authImage").show();
+                    $("#signup-captcha-img").attr("src","/member/randomCode.dhtml?data="+Math.random());
+                }
+                password.css("borderColor","red");
+                loginpwd_error.css("display","block");
+                loginpwd_error.html(data.message);
+            }
+        }
+    });
+}
+
+
+
+
+
+var index=60;
+function resetButton(){
+    var btn=$(".btnIdentity");
+    if(index==0){
+        btn.css("background-color","#FF4B00");
+        btn.attr("disabled",false);
+        btn.html("获取短信验证");
+
+        index=60;
+    }else{
+
+        btn.css("background-color","#CCC");
+        btn.html(index+"秒后重新发送");
+        index--;
+        setTimeout(resetButton, 1000);
+    }
+}
+
+
+$(".btnIdentity").click(function(){
+    var mobile=$("#phone").val();
+    if(! mobile.match(/^1[3|4|5|8|7][0-9]\d{4,8}$/) || mobile.length!=11){
+        phone_error.css("display", "block");
+        phone_error.html("&nbsp;请输入正确在手机号码");
+        return;
+    }
+    $.ajax({
+        url:"/member/isMobileExist.dhtml",
+        type:"get",
+        data:"mobile="+mobile,
+        dataType: "json",
+        async: false,
+        cache:false,
+        dataType:"json",
+        success:function(result){
+            if(result==false){
+                phone_error.css("display", "block");
+                phone_error.html("&nbsp;该手机号已注册,可直接登录");
+                return;
+            }else{
+                $("#btnIdentityCode").attr("disabled",true);
+                smsmodel=mobile;
+                $.ajax({
+                    url:"/member/getIdentifyingCode.dhtml",
+                    type:"get",
+                    data:"mobile="+mobile,
+                    dataType: "json",
+                    cache:false,
+                    success:function(result){
+                        if(result.status=="error"){
+                            alert(result.content);
+                        }
+                    }
+                });
+
+                resetButton();
+            }
+        }
+    });
+});
+
+$("#main").click(function(){
+    window.location= "/main/index.dhtml";
+});
+
+</script>
 </body>
 </html>
