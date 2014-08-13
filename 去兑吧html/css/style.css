@@ -1,14 +1,5 @@
 @charset "utf-8";
-body, html, div, h1, h2, h3, h4, h5, h6, ul, ol, li, input, span, label, tabel, dl, dt, dd, p, fieldset, legend, select, option, input, textarea, header, footer, aside, section, article, nav, menu {
-    outline: none;
-    margin: 0;
-    padding: 0;
-    font-family: "Microsoft Yahei", arial, verdana, sans-serif;
-    text-align: left;
-    font-size: 12px;
-    vertical-align: baseline;
-    color: #666
-}
+
 ul, ol, li, em, p {
     list-style: none;
     font-size: 12px;
@@ -23,21 +14,7 @@ img {
 input, select {
     vertical-align: middle;
 }
-a, img {
-    text-decoration: none;
-    color: #555;
-    outline: none;
-    border: 0;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-}
-body {
-    
-}
+
 table {
     width: 100%;
 }
@@ -357,11 +334,11 @@ div.qdb-use-list a:hover{
 }
 
 /*页脚*/
-.qdb-footer {
+/* .qdb-footer {
     background-color: #fff;
     padding: 15px 0 10px;
     margin: 10px 0 0;
-}
+} */
 
 .qdb-footer-center dl {
     float:left;
@@ -880,7 +857,7 @@ input.qdb-psw-submit {
 }
 /*内容展示页*/
 .qdb-content-top {
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 20px;
     background-color: #fff;
 	border:1px solid #BEBEBE;
@@ -900,17 +877,17 @@ input.qdb-psw-submit {
 .qdb-focus-thum {
     height: 56px;
 	margin-top:10px;
-	margin-left:15px;
     position: relative;
+	width:440px;
 }
 .qdb-focus-thum img {
-    width: 70px;
+    width: 84px;
     height: 52px;
     border: 2px solid transparent;
 }
 .qdb-focus-thum li {
     float: left;
-    width: 80px;
+    width: 87px;
     cursor: pointer;
 }
 .qdb-focus-thum li:hover img, .qdb-focus-thum li.cur img {
@@ -930,7 +907,7 @@ input.qdb-psw-submit {
 .qdb-thum-right {
     position: absolute;
     cursor: pointer;
-    left: 400px;
+    left: 438px;
     top: 0;
     width: 14px;
     height: 56px;
@@ -983,6 +960,7 @@ input.qdb-psw-submit {
     color: #646464;
     min-width: 80px;
     line-height: 72px;
+	margin-right:40px;
 }
 .qdb-sell-price3 {
     text-decoration: line-through;
@@ -1010,9 +988,9 @@ input.qdb-psw-submit {
 }
 input.qdb-sell-txt {
     font-size: 14px;
-    height: 33px;
-    line-height: 33px;
-    width: 70px
+    height: 30px;
+    line-height: 30px;
+    width: 55px
 }
 .qdb-sell-num em {
     margin-left: 20px;
@@ -1025,13 +1003,15 @@ input.qdb-sell-txt {
 .qdb-sell-submit {
     padding: 15px 50px;
     border: none;
-    background-color: #FF4B00;
+    background: url(../pic/duihuan.jpg);
     font-size: 25px;
     color: #fff;
     border-radius: 2px;
     overflow: visible;
     cursor: pointer;
 	border-radius:4px;
+	width:200px;
+	height:56px;
 }
 
 .qdb-sell-submit-disable {
