@@ -5,7 +5,9 @@
 <title>兑商品</title>
 <link href="css/reset.css" rel="stylesheet" type="text/css" />
 <link href="css/h_b_c.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
 <script type="text/javascript">
 $(function(){
 	var isChrome = navigator.userAgent.toLowerCase().match(/chrome/) != null;//判断是否是谷歌浏览器
@@ -115,6 +117,25 @@ $(function(){
 		)		
 	})
 </script>
+<!--Begin Author:wuqiwei QQ:1058633117 AddReason:ajax分页 -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+				var opt = {callback: pageselectCallback};
+				opt["items_per_page"]=5;
+				opt["num_display_entries"]=5;
+				opt["num_edge_entries"]=2;
+				// 注意：此变量值需要改变，其值为后台数据的总个数
+				var totalNum=100;
+                $("#Pagination").pagination(totalNum, opt);
+            });
+			// 注意：当点击分页按钮时改方法会被调用，第一个参数为当前页数
+			function pageselectCallback(page_index, jq){
+				
+                return false;
+            }
+
+        </script>
+<!--Begin Author:wuqiwei QQ:1058633117 AddReason:ajax分页 -->
 <style type="text/css">
 	.menu{margin: 0 auto;width: 1100px;height:44px;	}
 	.border{border-bottom: 1px dotted #e4e4e4;overflow: hidden;padding-bottom:12px;	}
@@ -295,8 +316,8 @@ $(function(){
 	<div class="menu">
 		<span style="float:left;"> 分类：</span>
 		<ul class="top-level">
-            <li style="background:#E40001; padding:2px 5px 2px 5px;">
-             <a style="color:#FFFFFF" href="javascript:void(0)" value="sore-1-1">全部</a>
+            <li style="background:#E40001;">
+             <a style="color:#FFFFFF;padding:2px 5px;" href="javascript:void(0)" value="sore-1-1">全部</a>
             </li>
 			<li><a href="javascript:void(0)" value="sort-1-2">服装鞋帽</a></li>
 			<li><a href="javascript:void(0)" value="sort-1-3">家居家装</a></li>
@@ -391,8 +412,8 @@ $(function(){
 	<div class="menu">
 		<span style="float:left;">地区：</span>
 		<ul id="address">
-			<li style="background:#E40001; padding:2px 5px 2px 5px;">
-             <a style="color:#FFFFFF" href="#">株洲</a>
+			<li style="background:#E40001;">
+             <a style="color:#FFFFFF;padding:2px 5px;" href="#">株洲</a>
             </li>
 			<li><a href="#">长沙</a></li>
 			<li><a href="#">北京</a></li>
@@ -418,8 +439,8 @@ $(function(){
 	<div class="menu">
 		<span style="float:left;">价格：</span>
 		<ul id="price">
-			<li style="background:#E40001; padding:2px 5px 2px 5px;">
-            	<a style="color:#FFFFFF" href="javascript:void(0)">全部</a>
+			<li style="background:#E40001;">
+            	<a style="color:#FFFFFF;padding:2px 5px;" href="javascript:void(0)">全部</a>
             </li>
 			<li><a href="#">0-49积分</a></li>
 			<li><a href="#">50-99积分</a></li>
@@ -443,8 +464,8 @@ $(function(){
 	<div class="menu">
 		<span style="float:left;" >排序：</span>
 		<ul id="order">
-			<li style="background:#E40001; padding:2px 5px 2px 5px;">
-              <a style="color:#FFFFFF" href="javascript:void(0)">默认</a>
+			<li style="background:#E40001;">
+              <a style="color:#FFFFFF;padding:2px 5px;" href="javascript:void(0)">默认</a>
             </li>
 			<li><a href="#">销量</a></li>
 			<li><a href="#">价格</a></li>
@@ -453,6 +474,10 @@ $(function(){
 	<div class=""></div>
 	<div class=""></div>
 	<div class=""></div>
+</div>
+<div class="topAjaxPagination">
+ <style>.topAjaxPagination{margin-left:930px;margin-top:15px;}</style>
+ <div id="Pagination" class="pagination"></div>
 </div>
 <div class="content">
 	<div class="floor">
@@ -572,7 +597,10 @@ $(function(){
 		</ul>
 	  </div>
 </div>
-
+ <div class="bottomAjaxPagination">
+    <style>.bottomAjaxPagination{margin-left:950px;margin-top:-25px;}</style>
+    <div id="Pagination" class="pagination"></div>
+ </div>
 <div class="qdb-footer">
   <div class="qdb-footer">
     <div class="qdb-footer-center">
