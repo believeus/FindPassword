@@ -881,7 +881,6 @@ input.qdb-psw-submit {
 /*内容展示页*/
 .qdb-content-top {
     margin-top: 30px;
-	margin-left:15px;
     padding: 20px;
     background-color: #fff;
 	border:1px solid #BEBEBE;
@@ -890,13 +889,13 @@ input.qdb-psw-submit {
     float: left;
 }
 .qdb-focus-show {
-    width: 500px;
-    height: 400px;
+    width: 440px;
+    height: 360px;
     overflow: hidden;
 }
 .qdb-focus-show img {
-    width: 500px;
-    height: 400px;
+    width: 440px;
+    height: 360px;
 }
 .qdb-focus-thum {
     height: 56px;
@@ -911,43 +910,58 @@ input.qdb-psw-submit {
 }
 .qdb-focus-thum li {
     float: left;
-    width: 82px;
+    width: 80px;
     cursor: pointer;
 }
 .qdb-focus-thum li:hover img, .qdb-focus-thum li.cur img {
     border: 2px solid #ff4b00;
 }
-.qdb-thum-left, .qdb-thum-right {
+.qdb-thum-left{
     position: absolute;
     cursor: pointer;
-    left: -12px;
+    left: -17px;
     top: 0;
-    width: 5px;
+    width: 14px;
     height: 56px;
-    background: url(../images/icons.png) -41px -68px no-repeat;
+   /*  background: url(../images/icons.png) -41px -68px no-repeat; */
+	background:url(../pic/p.jpg);
     display: block;
 }
 .qdb-thum-right {
+    position: absolute;
+    cursor: pointer;
+    left: 400px;
+    top: 0;
+    width: 14px;
+    height: 56px;
+   /*  background: url(../images/icons.png) -41px -68px no-repeat; */
+	background:url(../pic/n.jpg);
+    display: block;
+}
+/* .qdb-thum-right {
     left: 407px;
     background-position: -46px -68px;
-}
+} */
 .qdb-sell {
     float: right;
-    width: 620px
+    width: 680px
 }
 .qdb-sell-title {
     font-size: 20px;
     color: #51ba9b;
-    line-height: 2.3;
-    border-bottom: 2px solid #d9d9d9;
+    height:50px;
+    border-bottom: 1px solid #d9d9d9;
     font-weight: 700;
+	padding-left:20px;
 }
 .qdb-sell-price {
     height: 72px;
     border-bottom: 1px solid #d9d9d9;
+	padding-left:20px;
 }
 .qdb-yunfei {
-    margin-top: 20px;
+    margin-top: 27px;
+	padding-left:20px;
 }
 .qdb-sell-price1 {
     float: left;
@@ -975,7 +989,8 @@ input.qdb-psw-submit {
     color: #b1b1b1
 }
 .qdb-sell-num {
-    margin-top: 20px
+    margin-top: 25px;
+	padding-left:20px;
 }
 .qdb-sell-num input {
     border: 1px solid #cfcfcf;
@@ -1004,7 +1019,8 @@ input.qdb-sell-txt {
     vertical-align: middle;
 }
 .qdb-sell-btn {
-    margin-top: 55px
+    margin-top: 55px;
+	padding-left:20px;
 }
 .qdb-sell-submit {
     padding: 15px 50px;
@@ -1033,7 +1049,7 @@ input.qdb-sell-txt {
     padding: 20px;
 }
 .qdb-tabs-nav {
-    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 2px solid #d6d6d6;
     height: 40px;
     z-index: 77;
     width: 1200px;
@@ -1071,12 +1087,12 @@ input.qdb-sell-txt {
     border: 2px solid #ff4b00;
 }
 .qdb-tabs-nav li.current {
-    border: 1px solid #d6d6d6;
+    border: 2px solid #d6d6d6;
     border-bottom: none;
     border-top-color: #FF4B00;
 }
 div.qdb-slider {
-    width: 410px;
+    width: auto;
     height: 56px;
     overflow: hidden;
     position: relative;

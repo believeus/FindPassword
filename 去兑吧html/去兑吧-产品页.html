@@ -7,6 +7,7 @@
 <link href="css/h_b_c.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
 <script>
 $(function(){
 		
@@ -350,6 +351,12 @@ $(function(){
                             <li><img onclick="clickimg(this);" src="pic/b2963c7ef2e044e0a9a0cf218fb2b387.jpg" alt="" class="qdb-cur-img"></li>
                         
                             <li><img onclick="clickimg(this);" src="pic/fcaef613c927437a826be23ba8fc9686.jpg" alt="" class="qdb-cur-img current"></li>
+
+							<li><img onclick="clickimg(this);" src="pic/b2963c7ef2e044e0a9a0cf218fb2b387.jpg" alt="" class="qdb-cur-img current"></li>
+
+							<li><img onclick="clickimg(this);" src="pic/fcaef613c927437a826be23ba8fc9686.jpg" alt="" class="qdb-cur-img current"></li>
+
+							<li><img onclick="clickimg(this);" src="pic/b2963c7ef2e044e0a9a0cf218fb2b387.jpg" alt="" class="qdb-cur-img current"></li>
                         
                     </ul>
                 </div>
@@ -382,7 +389,7 @@ $(function(){
 
             </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label id="num_error" class="null" style="display: none;"></label>
-            <div style="margin-top: 33px;" class="qdb-sell-btn">
+            <div style="margin-top: 25px;" class="qdb-sell-btn">
                 <input type="button" value="立即兑换" class="qdb-sell-submit" name="duihuanBtn" id="duihuanBtn"><br/><br/>
 				<span style="color:#999999;">本商品支持在线支付、京豆支付、余额支付等</span>
 			</div>
@@ -393,7 +400,7 @@ $(function(){
 		<div class="qdb-tabs-nav" otop="541" style="position: static; top: 0px;">
 
             <ul class="tabs">
-                <li class="qdb-cur current">本单详情</li>
+                <li class="qdb-cur current">商品介绍</li>
                
             </ul>
         </div>
@@ -700,7 +707,7 @@ $("input[name='password']").bind("click",function(){
 
 $(function(){
 
-
+	$(".qdb-slider").scrollable();
     $(".slidetabs li img").click(function() {
         if ($(this).hasClass("current")) { return; }
         var url = $(this).attr("src").replace("_t", "");
@@ -764,6 +771,8 @@ $(function(){
         }
 
     })
+
+
 
 
     $("#qdb-sell-txt").bind('blur',function(){
