@@ -27,7 +27,7 @@ a:hover{text-decoration:underline;}
 .clearfix{zoom:1;}
 .wrap{width:100%;}
 .content{width:1200px;margin-left:auto;margin-right:auto;clear:both;overflow:hidden;}
-.header{border-top:2px solid #ff4b00;background-color:#fff;}
+.header{background-color:#fff;}
 div.logo{float:left;margin:10px 0;}
 div.city{height:80px;line-height:81px;margin:10px 0;float:left;}
 div.city .citychangge{color:#73abc9;margin-left:10px;}
