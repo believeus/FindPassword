@@ -984,9 +984,9 @@ input.qdb-psw-submit {
 }
 .qdb-sell-num input {
     border: 1px solid #cfcfcf;
-    width: 20px;
+    width: 25px;
     height: 20px;
-    line-height: 20px;
+    line-height: 10px;
     background-color: #FFF;
     text-align: center;
     font-size: 12px;
@@ -1000,7 +1000,7 @@ input.qdb-psw-submit {
 }
 input.qdb-sell-txt {
     font-size: 14px;
-    height: 30px;
+    height: 28px;
     line-height: 30px;
     width: 55px
 }
