@@ -121,9 +121,11 @@ $(function(){
         <script type="text/javascript">
             $(document).ready(function(){
 				var opt = {callback: pageselectCallback};
-				opt["items_per_page"]=5;
-				opt["num_display_entries"]=5;
-				opt["num_edge_entries"]=2;
+				opt["items_per_page"]=0;
+				opt["num_display_entries"]=4;
+				opt["num_edge_entries"]=0;
+				opt["prev_text"]="上一页";
+				opt["next_text"]="下一页";
 				// 注意：此变量值需要改变，其值为后台数据的总个数
 				var totalNum=100;
                 $("#Pagination").pagination(totalNum, opt);
