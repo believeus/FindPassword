@@ -857,7 +857,7 @@ input.qdb-psw-submit {
 }
 /*内容展示页*/
 .qdb-content-top {
-    margin-top: 20px;
+    margin-top: 16px;
     padding: 20px;
     background-color: #fff;
 	border:1px solid #BEBEBE;
@@ -866,23 +866,27 @@ input.qdb-psw-submit {
     float: left;
 }
 .qdb-focus-show {
-    width: 440px;
-    height: 360px;
+    width: 436px;
+    height: 330px;
     overflow: hidden;
 }
 .qdb-focus-show img {
-    width: 440px;
+    width: 436px;
     height: 360px;
 }
 .qdb-focus-thum {
-    height: 56px;
+    height: 66px;
 	margin-top:10px;
     position: relative;
-	width:440px;
+	width:436px;
 }
+.qdb-cur-img current{
+	width:82px;
+	height:66px;
+	}
 .qdb-focus-thum img {
-    width: 84px;
-    height: 52px;
+    width: 82px;
+    height: 66px;
     border: 2px solid transparent;
 }
 .qdb-focus-thum li {
@@ -899,7 +903,7 @@ input.qdb-psw-submit {
     left: -17px;
     top: 0;
     width: 14px;
-    height: 56px;
+    height: 66px;
    /*  background: url(../images/icons.png) -41px -68px no-repeat; */
 	background:url(../pic/p.jpg);
     display: block;
@@ -910,7 +914,7 @@ input.qdb-psw-submit {
     left: 438px;
     top: 0;
     width: 14px;
-    height: 56px;
+    height: 66px;
    /*  background: url(../images/icons.png) -41px -68px no-repeat; */
 	background:url(../pic/n.jpg);
     display: block;
@@ -921,36 +925,43 @@ input.qdb-psw-submit {
 } */
 .qdb-sell {
     float: right;
-    width: 680px
+    width: 692px;
 }
 .qdb-sell-title {
-    font-size: 20px;
+	font-family:"方正大黑简体";
+    font-size: 23px;
     color: #51ba9b;
-    height:50px;
+    height:40px;
+	padding-top:10px;
     border-bottom: 1px solid #d9d9d9;
-    font-weight: 700;
+    
 	padding-left:20px;
 }
 .qdb-sell-price {
+	
     height: 72px;
     border-bottom: 1px solid #d9d9d9;
 	padding-left:20px;
 }
+
 .qdb-yunfei {
+	color:#999999;
     margin-top: 27px;
 	padding-left:20px;
 }
 .qdb-sell-price1 {
+	font-family:"Arial Black";
     float: left;
     width: 28%;
-    font-size: 30px;
+    font-size: 36px;
 	font-weight:bold;
     line-height: 73px;
     color: #FF4B00
 }
 .qdb-sell-price1 strong {
-    font-size: 30px;
-    color: #8e8e8e;
+	font-family:"微软雅黑";
+    font-size: 28px;
+    color: #999999;
     font-weight: normal;
 }
 .qdb-sell-price2, .qdb-sell-price3 {
@@ -967,7 +978,8 @@ input.qdb-psw-submit {
     color: #b1b1b1
 }
 .qdb-sell-num {
-    margin-top: 25px;
+	color:#999999;
+    margin-top: 20px;
 	padding-left:20px;
 }
 .qdb-sell-num input {
@@ -1003,7 +1015,7 @@ input.qdb-sell-txt {
 .qdb-sell-submit {
     padding: 15px 50px;
     border: none;
-    background: url(../pic/duihuan.jpg);
+    background: url(../pic/duihuanbq.jpg);
     font-size: 25px;
     color: #fff;
     border-radius: 2px;
@@ -1043,10 +1055,11 @@ input.qdb-sell-txt {
     float: left;
     font-size: 16px;
     text-align: center;
-    color: #333;
+    color: #E4393C;
     margin-bottom: -1px;
     background-color: #fff;
     cursor: pointer;
+	font-weight: bold;
 }
 .qdb-tabs-nav li.cur {
     border: 1px solid #d6d6d6;
@@ -1064,7 +1077,7 @@ input.qdb-sell-txt {
     font-size: 14px;
 }
 .qdb-focus-thum li:hover img, .qdb-focus-thum li img.current {
-    border: 2px solid #ff4b00;
+    border: 1px solid #ff4b00;
 }
 .qdb-tabs-nav li.current {
     border: 2px solid #d6d6d6;
@@ -1073,7 +1086,7 @@ input.qdb-sell-txt {
 }
 div.qdb-slider {
     width: auto;
-    height: 56px;
+    height: 70px;
     overflow: hidden;
     position: relative;
 }
