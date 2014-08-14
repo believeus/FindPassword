@@ -157,12 +157,12 @@ $(function(){
 	.menu a:hover{background:#E40001;color:#FFFFFF;text-decoration:none;color:#FFFFFF;text-decoration:none;}
 	.menu ul{ margin-top:-5px;border-bottom: 1px dotted #e4e4e4;overflow: hidden;padding-bottom:5px;}
 	
-	.menu1{margin: 0 auto;width: 1140px;height:44px;margin-right:10px;}
+	.menu1{margin: 0 30px 0 auto;width: 1120px;height:44px;}
 	.menu1 li {float: left;margin: 0 12px;margin-top:13px;}
 	.menu1 span {font-weight: bold;margin-top:15px;}
 	.menu1 a {display: block;padding: 2px 5px;}
-	.menu1 a:hover{color:#FFFFFF;text-decoration:none;}
-	.menu1 a:hover{background:#E40001;color:#FFFFFF;text-decoration:none;color:#FFFFFF;text-decoration:none;}
+	<!--.menu1 a:hover{color:#FFFFFF;text-decoration:none;}
+	.menu1 a:hover{background:#E40001;color:#FFFFFF;text-decoration:none;color:#FFFFFF;text-decoration:none;}-->
 	.menu1 ul{ margin-top:-5px;overflow: hidden;padding-bottom:0px;}
 
 	.qdb-dw{
@@ -182,6 +182,10 @@ $(function(){
 	#upPagination span{
 		margin-top: 0;
 		padding:2px;
+	}
+	#upPagination a:hover{
+		background:none;
+		color:#15b;
 	}
 </style>
 </head>
@@ -329,7 +333,7 @@ $(function(){
       <li><a href="兑生活.html">兑生活</a></li>
       <li><a href="#">兑品牌</a></li>
       <li><a href="#">兑家装</a></li>
-      <li><a href="#">兑奢华</a></li>
+      <li><a href="#">兑奢华<img style="position:absolute;" src="pic/hot.gif"/></a></li>
       <li><a href="#">兑明日</a></li>
       <li><a href="#">兑礼品</a></li>
     </ul>
@@ -461,6 +465,12 @@ $(function(){
 		        $("#order li a").css("background","").css("color","#000000");
 		        $(this).css("background","#E40001").css("color","#FFFFFF");						   
 			});
+			
+			var isChrome = navigator.userAgent.toLowerCase().match(/chrome/) != null;//判断是否是谷歌浏览器
+			if(isChrome){
+			   //alert("我是谷歌浏览器");
+			   $("#upPagination").css("margin-top","-23px");
+			}
 		});
     </script>
 	<!--End Author:wuqiwei QQ:1058633117 AddReason:点击排序菜单改变其背景色-->
@@ -475,8 +485,9 @@ $(function(){
 			<li><a href="#">价格</a></li>
 		</ul>
 		<div style="margin-left: 920px; float: right; margin-top: -22px;">
-			<span  id="curPage" style="font-weight:normal;">1</span><span style="margin-right: 10px;font-weight:normal;">/100</span>
-			<div id="upPagination" class="pagination" style="float:right;"></div>
+			<span  id="curPage" style="font-weight:normal;">1</span>
+			<span style="margin-right: 10px;font-weight:normal;">/100</span>
+			<span id="upPagination" class="pagination" style="float:right;margin-top: -3px;"></span>
 		</div>
 	</div>
 </div>
