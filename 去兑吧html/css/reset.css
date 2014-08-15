@@ -29,7 +29,7 @@ a:hover{text-decoration:underline;}
 .content{width:1200px;margin-left:auto;margin-right:auto;clear:both;overflow:hidden;}
 .header{background-color:#fff;}
 div.logo{float:left;margin:10px 0;}
-div.city{height:80px;line-height:81px;margin:10px 0;float:left;}
+div.city{height:48px;line-height:81px;margin:10px 0;float:left;}
 div.city .citychangge{color:#73abc9;margin-left:10px;}
 .header-btn{float:right;height:80px;line-height:80px;margin:10px 0;overflow:hidden}
 .header-btn ul{overflow:hidden;}
