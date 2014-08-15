@@ -1076,7 +1076,7 @@ input.qdb-sell-txt {
     font-size: 14px;
 }
 .qdb-focus-thum li:hover img, .qdb-focus-thum li img.current {
-    border: 1px solid #ff4b00;
+    border: 2px solid #ff4b00;
 }
 .qdb-tabs-nav li.current {
     border: 2px solid #d6d6d6;
