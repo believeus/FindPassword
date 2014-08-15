@@ -14,7 +14,7 @@ $(function(){
 	if(isChrome){
 	   //alert("我是谷歌浏览器");
 	   //$(".qdb-dw").css("left","350px");
-	   $("#upPagination").css("margin-top","-17px");
+	   //$("#upPagination").css("margin-top","-17px");
 	}
 
         var $banner=$('.banner');
@@ -513,7 +513,10 @@ $(function(){
 			<li><a href="#">价格</a></li>
 	    </ul>
 		<div style="margin-left: 920px; float: right; margin-top: -25px;">
-			<span  id="curPage" style="font-weight:normal;">1</span><span style="margin-right: 10px;font-weight:normal;">/100</span>
+		<div style="float: left; margin-top: 5px;">
+			<span  id="curPage" style="font-weight:normal;">1</span>
+			<span style="margin-right: 10px;font-weight:normal;">/100</span>
+		</div>
 			<div id="upPagination" class="pagination" style="float:right;margin-top: 3px;"></div>
 		</div>
 	</div>
