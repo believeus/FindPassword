@@ -14,7 +14,7 @@ $(function(){
 	if(isChrome){
 	   //alert("我是谷歌浏览器");
 	   //$(".qdb-dw").css("left","350px");
-	   $("#upPagination").css("margin-top","-20px");
+	   $("#upPagination").css("margin-top","-17px");
 	}
 
         var $banner=$('.banner');
@@ -189,6 +189,9 @@ $(function(){
 	#upPagination a:hover{
 		background:none;
 		color:#15b;
+	}
+	#footPagination .next{
+		margin-right:0;	
 	}
 </style>
 </head>
@@ -511,7 +514,7 @@ $(function(){
 	    </ul>
 		<div style="margin-left: 920px; float: right; margin-top: -25px;">
 			<span  id="curPage" style="font-weight:normal;">1</span><span style="margin-right: 10px;font-weight:normal;">/100</span>
-			<div id="upPagination" class="pagination" style="float:right;margin-top: 0px;"></div>
+			<div id="upPagination" class="pagination" style="float:right;margin-top: 3px;"></div>
 		</div>
 	</div>
 </div>
@@ -635,8 +638,8 @@ $(function(){
 	</div>
 </div>
 
-<div style="margin-left:970px;margin-top:-20px;">
-	<div id="footPagination" class="pagination"></div>
+<div style="width:1200px;height:auto;overflow:hidden;margin:0 auto;">
+	<div id="footPagination" class="pagination" style="float:right;"></div>
 </div>
 
 <div class="qdb-footer">
