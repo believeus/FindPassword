@@ -343,11 +343,10 @@ div.qdb-use-list a:hover{
 .qdb-footer-center dl {
     float:left;
     padding-left: 15px;
-    width: 180px;
+    width: 220px;
     min-height:170px;
     overflow:hidden;
     *height:170px;
-    margin-bottom:40px;
 }
 .qdb-footer-center dl.mobile{
     width:110px;}
