@@ -1,0 +1,479 @@
+<html>
+<head>
+<title>确认信息-兑商品</title>
+<link href="css/reset1.css" rel="stylesheet" type="text/css" />
+<link href="css/h_b_c.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+		overflow:auto;
+	}
+	a{
+		text-decoration:none;
+	}
+	.main{
+		width:980px;
+		height:auto;
+		margin:30px auto 30px;
+		overflow:hidden;
+		border:1px solid #D6D6D6;
+		border-radius:4px;
+	}
+	.main_title{
+		background:url(pic/u112.png);
+		width:980px;
+		height:50px;
+		line-height:50px;
+	}
+	.main_title span{
+		color: red;
+		font-family: microsoft yahei;
+		font-size: 20px;
+		font-weight: bold;
+		padding-left:30px;
+	}
+	.main_shrxx{
+		border-bottom: 1px dashed #f1f1f1;
+		height: 80px;
+		line-height: 100px;
+		margin: 0 auto;
+		width: 923px;
+	}
+	.main_shrxx span{
+		font-family: microsoft yahei;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.main_shrxx_body{
+		border-bottom: 1px dashed #f1f1f1;
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+		padding-bottom: 30px;
+		padding-top: 20px;
+		border: 2px solid red;
+	}
+	.xxtable{
+		color: #666;
+	}
+	.xxtable tr {
+		line-height: 35px;
+	}
+	.xx{
+		font-family: microsoft yahei;
+		font-size: 12px;
+		text-align:right;
+	}
+	.sb{
+		padding-top:10px;
+		}
+	.main_ddxx{
+		border-bottom: 1px dashed #f1f1f1;
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+		padding-bottom: 30px;
+		padding-top: 20px;
+	}
+	.main_ddxx_title{
+		width:923px;
+		height:40px;
+		line-height:40px;
+		font-family: microsoft yahei;
+		font-weight: bold;
+		font-size:18px;
+	}
+	.main_ddxx_body{
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+	}
+	.main_ddxx_body_title{
+		font-family: microsoft yahei;
+		font-size:12px;
+		width:335px;
+		height:35px;
+		line-height:35px;
+		text-align:center;
+		float:left;
+		border-bottom:3px solid #FEBEA4;
+		margin-right:3px;
+	}
+	.main_ddxx_body_xx{
+		height: auto;
+		overflow: hidden;
+		padding: 10px;
+		width: 923px;
+		float:left;
+	}
+	.main_ddxx_body_pri{
+		width:100px;
+		height:85px;
+		line-height:85px;
+		float:left;
+		font-family:microsoft yahei;
+		text-align:center;
+		font-size:12px;
+		margin-left:3px;
+	}
+	.main_zhifu{
+		font-family: microsoft yahei;
+		font-weight: bold;
+		height: 40px;
+		line-height: 40px;
+		width: 923px;
+		font-size:18px;
+	}
+	.main_zhifu_p{
+		font-family: microsoft yahei;
+		font-size: 12px;
+		line-height: 40px;
+		width: 923px; 
+		height: auto; 
+		overflow: hidden;
+		padding: 15px 0 0;
+		border-top: 1px dashed #f1f1f1;
+		border-bottom: 1px dashed #f1f1f1;
+	}
+	.main_tijiao{
+		float: right;
+		font-family: microsoft yahei;
+		font-size: 12px;
+		height: auto;
+		overflow: hidden;
+		padding: 30px 0;
+		width: auto;
+		margin-right:20px;
+	}
+	.main_tijiao tr {
+		line-height: 25px;
+	}
+	.main_tijiao_td {
+		color: #5e5e5e;
+		font-size: 14px;
+		text-align: right;
+	}
+	.main_tijiao span {
+		color: #c00;
+		font-size: 14px;
+		
+	}
+	input[type='text']{
+		border:1px solid #cccccc;
+		border-radius: 3px;
+		text-indent:4px;
+	}
+	input[type='text']:hover{
+		border:1px solid #33cccc;
+	}
+	input[type='submit']:hover{
+		opacity:0.8;
+	}
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<!--**************************************-->
+<div id="topnav" style="margin-top: -5px;">
+    <div style="width: 990px;padding-right:20px;" class="wbox clearfix">
+        <ul style="margin-top: 5px" class="topside">
+            <li id="gome-group"><a rel="nofollow" href="/website/main/newIndex.dhtml" target="_blank" title="去兑吧官网">去兑吧官网</a></li>
+            <li class="linespace"></li>
+            <li done="" class="pr hd-mygome js-tophover" id="phone-qdb"><a href="javascript:void(0)" target="_blank">手机去兑吧</a>
+                <div class="phone-qdbinfo" style="display: none; overflow: hidden; height: 120px; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px;">
+                    <div class="app-block">
+                        <p class="app-block__title">微信订阅号</p>
+                        <span class="app-block__content"><img src="pic/wxdyh.jpg"></span>
+                    </div>
+                    <div class="app-block">
+                        <p class="app-block__title">微信服务号</p>
+                        <span class="app-block__content"><img src="pic/wxfwh.jpg"></span>
+                    </div>
+                    <div class="app-block">
+                        <p class="app-block__title">去兑吧</p>
+                        <span class="app-block__content"><img src="pic/qdbewm.png"></span>
+                    </div>
+                </div></li>
+
+        </ul>
+        <ul class="topmenu clearfix">
+            <li id="loginDiv" class="login-top"><span class="gwelcome">去兑吧在线欢迎您！
+！</span><a class="glogin" rel="nofollow" href="/website/member/skipLogin.dhtml">请登录</a><a class="gsign" rel="nofollow" href="/website/member/skipRegister.dhtml">免费注册</a>
+                </li>
+            <li class="linespace"></li>
+            <li class="g-myoder"><a rel="nofollow" href="/website/order/order_list.dhtml">我的订单</a></li>
+            <li done="" class="pr hd-mygome js-tophover" id="homepageMyGome"><a rel="nofollow" class="menulink" href="javascript:void(0)">我的去兑吧<b></b></a>
+                <div class="menuhide" style="display: none;">
+                    <ul class="mygomeinfo clearfix">
+
+                        <li class="mygome-item item-line"><span class="itemlist-name">会员中心：</span>
+							<span class="mginfo"><a rel="nofollow" href="/website/order/order_list.dhtml">我的订单</a><span class="highlight" id="waitPay"></span></span>
+							<span class="mginfo"><a rel="nofollow" href="/website/member/toScoreList.dhtml">我的积分</a><span class="highlight" id="waitComm"></span></span></li>
+
+                        <li class="mygome-item"><span class="itemlist-name">&nbsp;</span>
+							<span class="mginfo"><a rel="nofollow" href="/website/member/showModifyPassword.dhtml" target="_blank">账户安全</a><span class="highlight" id="my-favorites"></span></span> <span class="mginfo"><a rel="nofollow" href="/website/member/showPwQuestion.dhtml" target="_blank">密保设置</a></span></li>
+                    </ul>
+                    <div style="display: none;" class="topbrowsed">
+                        <h3 class="tb-title">最近浏览的商品</h3>
+                        <ul id="topbrowsedprod">
+                        </ul>
+                    </div>
+                </div></li>
+            <li class="linespace"></li>
+
+
+            <li class="no-map"><a target="_blank" rel="nofollow" href="/mer/admin/merchant/open.dhtml"><span class="valign-inline">商家入驻</span></a></li>
+            <li id="menus-itemlast" class="no-map"><a target="_blank" rel="nofollow" href="/mer/admin/merchant/login.dhtml"><span class="valign-inline">商家登陆</span></a></li>
+        </ul>
+    </div>
+</div>
+<!--**************************************-->
+<div style="width: 100%;background-color: #fff;border-bottom: 2px solid #eeeeee;" class="wrap header">
+    <div style="width: 1000px" class="content">
+        <div class="logo">
+            <h1><a href="/website/main/newIndex.dhtml"><img src="pic/logo.jpg"></a></h1>
+        </div>
+       
+        <div class="header-btn">
+
+        </div>
+    </div>
+</div>
+<!--**************************************-->
+	<div class="main">
+		<div class="main_title">
+			<span>确认订单</span>
+		</div>
+		<div class="main_shrxx">
+			<span>收货人信息 <a id="xiugai" href="#" style="color:red;font-size:14px;display:none;">[修改]</a></span>
+		</div>
+		<div class="main_shrxx_body">
+			<table class="xxtable">
+				<tr>
+					<td class="xx"><font color="red">*</font>收货人姓名：</td>
+					<td><input type="text" name="" style="width:220px;height:30px;font-size: 16px;"/></td>
+				</tr>
+				<tr>
+					<td class="xx"><font color="red">*</font>所在地区：</td>
+					<td>
+						<select name="" style="width:180px;height:30px;">
+							<option value="湖北省">湖北省</option>
+							<option value="湖南省">湖南省</option>
+						</select>
+						<select name="" style="width:180px;height:30px;">
+							<option value="武汉市">武汉市</option>
+							<option value="十堰市">十堰市</option>
+						</select>
+						<select name="" style="width:180px;height:30px;">
+							<option value="洪山区">洪山区</option>
+							<option value="武昌区">武昌区</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="xx"><font color="red">*</font>详细地址：</td>
+					<td><input type="text" name="" style="width:549px;height:30px;font-size: 16px;"/></td>
+				</tr>
+				<tr>
+					<td class="xx"><font color="red">*</font>手机号码：</td>
+					<td><input type="text" name="" style="width:180px;height:30px;font-size: 16px;"/><font style="font-family: microsoft yahei;font-size: 12px;">&nbsp;或&nbsp;固定电话：</font><input type="text" name="" style="width:180px;height:30px;font-size: 16px;"/></td>
+				</tr>
+					<td class="xx">邮箱：</td>
+					<td><input type="text" name="" style="width:180px;height:30px;font-size: 16px;"/></td>
+				</tr>
+                </tr>
+					<td class="xx"></td>
+					<td class="sb">
+                    <input type="submit" value="保存收货人信息" id="baocun" style="width:110px;height:30px;color:#ffffff;background:#50BB9B;border-radius:3px;font-family:microsoft yahei;font-size:12px;border:1px solid #FFF;cursor: pointer;">
+                    
+                    </div>
+                    </td>
+				</tr>
+			</table>
+		</div>
+		<div class="main_ddxx">
+			<div class="main_ddxx_title">
+				订单信息
+			</div>
+			<div class="main_ddxx_body">
+				<div class="main_ddxx_body_title">商品信息</div>
+				<div class="main_ddxx_body_title" style="width:100px;">价格</div>
+				<div class="main_ddxx_body_title" style="width:100px;">积分</div>
+				<div class="main_ddxx_body_title" style="width:100px;">数量</div>
+				<div class="main_ddxx_body_title" style="width:100px;">小计</div>
+				<div class="main_ddxx_body_title" style="width:160px;">配送方式</div>
+				<div class="main_ddxx_body_xx" style="width:315px;">
+					<img src="pic/u40.png" style="width:76px;height:62px;float:left;">
+					<div style="width: 225px;float:left;font-size:12px;font-family:microsoft yahei;padding:5px;">不锈钢单杆晾衣架 落地折叠晾晒架 升降晾衣架</div>
+				</div>
+				<div class="main_ddxx_body_pri">￥2000.00</div>
+				<div class="main_ddxx_body_pri">2000</div>
+				<div class="main_ddxx_body_pri">
+					<div style="width:70px;height:25px;border:1px solid #FFBFA4;margin-left: 16px;margin-top: 28px;">
+						<div id="qdb-sell-reduce" style="width:19px;height:25px;line-height:25px;float:left;border-right:1px solid #FFBFA4;background:#FEF0E7;cursor:pointer;">-</div>
+						<div id="qdb-sell-txt" style="width:30px;height:25px;line-height:25px;float:left;">1</div>
+						<div id="qdb-sell-add" style="width:19px;height:25px;line-height:25px;float:left;border-left:1px solid #FFBFA4;background:#FEF0E7;cursor:pointer;">+</div>
+					</div>
+				</div>
+				<div class="main_ddxx_body_pri">￥2000.00</div>
+				<div class="main_ddxx_body_pri" style="width:165px;">
+					快递 <a href="#" style="color:red;">免邮</a>
+				</div>
+			</div>
+			<div id="tips_parent" style="width:923px;height:40px;line-height:40px;background:#FEEFE9;border-top:3px solid #FFBFA4;">
+				<span style="font-size:12px;font-family:microsoft yahei;color:red;padding-left:30px;">给客服留言：</span><textArea id="tips" style="width:465px;height:20px;line-height:20px;border:1px solid #CCCCCC;border-radius:4px;text-indent:10px;color:#777777;margin-top: 10px; position: absolute;resize:none;font-size:12px;" placeholder="如需按指定商品颜色、尺码、规格等属性 请留言说明，否则随机发货。"></textArea>
+			</div>
+		</div>
+		<div class="main_ddxx" style="padding-bottom:0;">
+			<div class="main_zhifu">
+				支付方式
+			</div>
+			<div class="main_zhifu_p">
+				<p>
+					<input type="checkbox" name="" style="margin-bottom:3px;"/>&nbsp;<span style="font-size:14px;">积分支付</span>
+					<input type="text" name="" style="width:150px;height:30px;margin-left:10px;font-size: 16px;"/>
+				</p>
+				<strong>
+					会员账户积分余额：88897（1积分=￥1.00）
+				</strong>
+			</div>
+		</div>
+		<div class="main_tijiao">
+			<table>
+				<tr>
+					<td class="main_tijiao_td">商品总额：</td>
+					<td><span>积分12+￥1.00</span></td>
+				</tr>
+				<tr>
+					<td class="main_tijiao_td">运费：</td>
+					<td><span>￥1.00</span></td>
+				</tr>
+				<tr>
+					<td class="main_tijiao_td">应付总额：</td>
+					<td><span style="font-weight:bold; font-size:21px;">积分12+￥1.00</span></td>
+				</tr>
+				<tr>
+					<td>
+						<div id="tips_ss" style="border:1px solid #cccccc;font-size:14px;width:235px;text-align:center;height:33px;line-height:33px;color:#FF4B00;margin-right: 13px;margin-top: 48px;">您需先保存<span style="color:#0052a3;">收货人信息</span>，再提交订单</div>
+					</td>
+					<td>
+						<input id="queren" type="submit" value="确认支付" disabled="disabled" style="width:175px;height:35px;font-weight: bold;color:#ffffff;background:#CCCCCC;border-radius:5px;font-family:microsoft yahei;font-size:17px;border:1px solid #CCCCCC;margin-top:48px;">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<!--***********************************************-->
+<div class="footer wrap">
+    <div class="content foot">
+        <ul class="site">
+            <li>
+                <dl>
+                    <dt>平台简介</dt>
+                    <dd><a href="/website/main/faqOne.dhtml#qdbsm">去兑吧说明</a></dd>
+                    <dd><a href="/website/main/faqOne.dhtml#wzsm">网站说明</a></dd>
+                    <dd><a href="/website/main/faqOne.dhtml#jfsm">积分说明</a></dd>
+                    <dd><a href="/website/main/faqOne.dhtml#dhgm">兑换或购买指南</a></dd>
+
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>会员中心</dt>
+                    <dd><a href="/website/main/faqTwo.dhtml#dhzn">兑换指南</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#cjwt">常见问题</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#hyxz">会员须知</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#grxx">个人信息</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#yhxy">用户协议</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>商家合作</dt>
+                    <dd><a href="/website/main/faqThree.dhtml#ptqz">平台圈子</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#hzxz">合作须知</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#hzlc">合作流程</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#hzxj">合作细节</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#zsyw">招商业务合作</a></dd>
+                </dl>
+            </li>
+
+        </ul>
+        <p class="copyright">
+            热线电话：400-0077-331
+            ?2014 去兑吧：<a href="http://www.miibeian.gov.cn/">湘ICP备14009495号-1</a>
+        </p>
+    </div>
+</div>
+<!--***********************************************-->
+	<script type="text/javascript">
+		 $().ready(function(){
+			 
+			$("#qdb-sell-add").bind('click',function(){
+				
+				if(parseInt($("#qdb-sell-txt").text())>=199){
+					$("#qdb-sell-txt").val(199);
+				}else{
+					var res=parseInt($("#qdb-sell-txt").text())+1;
+					$("#qdb-sell-txt").text(res);
+				}
+			});
+			 $("#qdb-sell-reduce").bind('click',function(){
+				
+				if(parseInt($("#qdb-sell-txt").text())<=1){
+					$("#qdb-sell-txt").text(1);
+				}else{
+					var res=parseInt($("#qdb-sell-txt").text())-1;
+					$("#qdb-sell-txt").text(res);
+				}
+			});
+
+			$("#tips").mouseover(function(){
+				$("#tips_parent").css("height","70px");
+				$(this).css("height","50px");
+			});
+			
+			$("#tips").mouseout(function(){
+				//alert($("#tips").val());
+				if($("#tips").val() ==""){
+					$("#tips_parent").css("height","40px");
+					$(this).css("height","20px");
+				}
+				
+			});
+			 $('#phone-qdb').hover(function(){
+				  $('.phone-qdbinfo').stop().slideDown(0);
+			  },function(){
+				  $('.phone-qdbinfo').stop().slideUp(200);
+			  });
+			   $(".menulink").hover(function(){
+					$(".menuhide").css("display","block");
+				},function(){
+
+				});
+				 $(".menuhide").hover(function(){
+
+				},function(){
+					$(this).css("display","none");
+				});
+				$("input[type='text']").focus(function(){
+					$(this).css("border","1px solid #33cccc");
+				});
+				$("#baocun").click(function(){
+					$("#xiugai").css("display","");
+					$("#queren").css({"background":"#FF4B00","border":"1px solid #FF4B00","cursor":"pointer"});
+					$("#queren").removeAttr("disabled");
+					$("#tips_ss").css("display","none");
+					$(".main_shrxx_body").css("border","2px solid #FFFFFF");
+				});
+				
+		 });
+	</script>
+</body>
+</html>

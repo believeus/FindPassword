@@ -1,0 +1,45 @@
+﻿/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+table{border-collapse:collapse;border-spacing:0;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:14px/1.14 'Microsoft Yahei',arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff; height:100%; overflow:auto;}
+html{height:100%; overflow:auto;}
+a{color:#999;}
+a:hover{color:#0099BB;}
+input, textarea, select,img {
+vertical-align: middle;
+outline: none;
+}
+.red{
+	color:#F00;
+	font-size:16px;}
+.null {
+	position: absolute;
+	border: 1px solid #ffbdbf;
+	color: #e6393d;
+	background: #ffebec;
+	line-height: 20px;
+	width: 250px;
+	font:12px/1.14 arial,\5b8b\4f53;outline:0;
+	top:32px;
+	left:0;
+}

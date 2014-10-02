@@ -1,0 +1,288 @@
+﻿/* media */
+/* 横屏 */
+@media screen and (orientation:landscape){
+    
+}
+/* 竖屏 */
+@media screen and (orientation:portrait){
+    
+}
+/* 窗口宽度<768,设计宽度=750 */
+@media (min-width: 768px){
+.container {
+    width: 750px;
+}
+.navbar-header {
+float: left;
+}
+.navbar-nav {
+float: left;
+clear:none !important;
+margin: 0;
+height:auto;
+}
+.navbar-nav li{
+	float:left;}
+
+.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12 {
+	float: left
+}
+.s12 {
+	width: 100%
+}
+.s11 {
+	width: 91.66666666666666%
+}
+.s10 {
+	width: 83.33333333333334%
+}
+.s9 {
+	width: 75%
+}
+.s8 {
+	width: 66.66666666666666%
+}
+.s7 {
+	width: 58.333333333333336%
+}
+.s6 {
+	width: 50%
+}
+.s5 {
+	width: 41.66666666666667%
+}
+.s4 {
+	width: 33.33333333333333%
+}
+.s3 {
+	width: 25%
+}
+.s2 {
+	width: 16.666666666666664%
+}
+.s1 {
+	width: 8.333333333333332%
+}
+.lf12 {
+	margin-left: 100%
+}
+.lf11 {
+	margin-left: 91.66666666666666%
+}
+.lf10 {
+	margin-left: 83.33333333333334%
+}
+.lf9 {
+	margin-left: 75%
+}
+.lf8 {
+	margin-left: 66.66666666666666%
+}
+.lf7 {
+	margin-left: 58.333333333333336%
+}
+.lf6 {
+	margin-left: 50%
+}
+.lf5 {
+	margin-left: 41.66666666666667%
+}
+.lf4 {
+	margin-left: 33.33333333333333%
+}
+.lf3 {
+	margin-left: 25%
+}
+.lf2 {
+	margin-left: 16.666666666666664%
+}
+.lf1 {
+	margin-left: 8.333333333333332%
+}
+.lf0 {
+	margin-left: 0
+}
+.nav-toggle{
+	display:none;
+}
+}
+/* 窗口宽度<992,设计宽度=970 */
+@media (min-width: 992px){
+.container {
+    width: 970px;
+}
+.m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9, .m10, .m11, .m12 {
+    float: left;
+}
+.m12 {
+	width: 100%
+}
+.m11 {
+	width: 91.66666666666666%
+}
+.m10 {
+	width: 83.33333333333334%
+}
+.m9 {
+	width: 75%
+}
+.m8 {
+	width: 66.66666666666666%
+}
+.m7 {
+	width: 58.333333333333336%
+}
+.m6 {
+	width: 50%
+}
+.m5 {
+	width: 41.66666666666667%
+}
+.m4 {
+	width: 33.33333333333333%
+}
+.m3 {
+	width: 25%
+}
+.m2 {
+	width: 16.666666666666664%
+}
+.m1 {
+	width: 8.333333333333332%
+}
+.lf12 {
+	margin-left: 100%
+}
+.lf11 {
+	margin-left: 91.66666666666666%
+}
+.lf10 {
+	margin-left: 83.33333333333334%
+}
+.lf9 {
+	margin-left: 75%
+}
+.lf8 {
+	margin-left: 66.66666666666666%
+}
+.lf7 {
+	margin-left: 58.333333333333336%
+}
+.lf6 {
+	margin-left: 50%
+}
+.lf5 {
+	margin-left: 41.66666666666667%
+}
+.lf4 {
+	margin-left: 33.33333333333333%
+}
+.lf3 {
+	margin-left: 25%
+}
+.lf2 {
+	margin-left: 16.666666666666664%
+}
+.lf1 {
+	margin-left: 8.333333333333332%
+}
+.lf0 {
+	margin-left: 0
+}
+}
+/* 窗口宽度<1200,设计宽度=1170 */
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
+}
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12 {
+	float: left
+}
+.l12 {
+	width: 100%
+}
+.l11 {
+	width: 91.66666666666666%
+}
+.l10 {
+	width: 83.33333333333334%
+}
+.l9 {
+	width: 75%
+}
+.l8 {
+	width: 66.66666666666666%
+}
+.l7 {
+	width: 58.333333333333336%
+}
+.l6 {
+	width: 50%
+}
+.l5 {
+	width: 41.66666666666667%
+}
+.l4 {
+	width: 33.33333333333333%
+}
+.l3 {
+	width: 25%
+}
+.l2 {
+	width: 16.666666666666664%
+}
+.l1 {
+	width: 8.333333333333332%
+}
+.lf12 {
+	margin-left: 100%
+}
+.lf11 {
+	margin-left: 91.66666666666666%
+}
+.lf10 {
+	margin-left: 83.33333333333334%
+}
+.lf9 {
+	margin-left: 75%
+}
+.lf8 {
+	margin-left: 66.66666666666666%
+}
+.lf7 {
+	margin-left: 58.333333333333336%
+}
+.lf6 {
+	margin-left: 50%
+}
+.lf5 {
+	margin-left: 41.66666666666667%
+}
+.lf4 {
+	margin-left: 33.33333333333333%
+}
+.lf3 {
+	margin-left: 25%
+}
+.lf2 {
+	margin-left: 16.666666666666664%
+}
+.lf1 {
+	margin-left: 8.333333333333332%
+}
+.lf0 {
+	margin-left: 0
+}
+}
+
+/* windows UI 贴靠 */
+@media screen and (-ms-view-state:snapped){
+    
+}
+/* 打印 */
+@media print{
+    
+}
+
+
+

@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+	
+	<script src="js/pcasunzip.js" type="text/javascript"></script>
+	
+    <link rel="icon" href="http://115.29.246.132:8098/website/resources/images/queduiba.ico">
+    <link rel="stylesheet" href="css/jbox.css">
+    <link rel="stylesheet" href="css/confirm.css">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+	<link rel="stylesheet" href="css/styleq.css">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/h_b_c.css" type="text/css">
+
+    <style type="text/css">
+        td{line-height:38px;}
+        .Validform_checktip{margin-left:0;}
+        .info{
+            border: 1px solid #ccc;
+            padding: 2px 20px 2px 5px;
+            color: #666;
+            position: absolute;
+            line-height: 20px;
+            background-color: #fff;
+            top: -26px;
+            left: 0;
+            display:none;
+        }
+        .dec {
+            bottom: -8px;
+            display: block;
+            height: 8px;
+            overflow: hidden;
+            position: absolute;
+            left: 10px;
+            width: 17px;
+        }
+        .dec s {
+            font-family: simsun;
+            font-size: 16px;
+            height: 19px;
+            left: 0;
+            line-height: 21px;
+            position: absolute;
+            text-decoration: none;
+            top: -9px;
+            width: 17px;
+        }
+        .dec .dec1 {
+            color: #ccc;
+        }
+        .dec .dec2 {
+            color: #fff;
+            top: -10px;
+        }
+        div.jbox{border: 0px #ff0000 solid;margin-top: 360px;}
+    </style>
+
+</head>
+
+<body style="background:#fdfdfd">
+
+<script type="text/javascript" src="js/respond.js"></script>
+<script src="js/jquery-1.js"></script>
+
+<script src="js/jquery_002.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/quduiba.js"></script>
+
+<script type="text/javascript" src="js/jquery_003.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/PCASClass.js"></script>
+
+<script type="text/javascript">
+$().ready(function() {
+	
+    window.history.go(1);
+
+    var $btnModiy = $("#btnModify");
+
+    var $btnSaveReceiver = $("#btnSaveReceiver");
+    var $btnPay = $("#btnPay");
+    var $isPayByScore = $("#isPayByScore");
+    var $buyNum = $("#buyNum");
+    var $score = $("#payScore");
+
+    var mScore = parseInt("49562.00");
+    var mGoodsScore = parseInt("120");
+    var mGoodsPrice = parseFloat("120.00");
+    var mTransportCost= parseFloat("1.20");
+
+    $("#goodsScore").val(mGoodsScore);
+
+    //页面初始化
+    $(function(){
+        if("com.lefen.member.dto.ReceiverDto@6d26ecef" == ""){
+            $(".qdb-zffs-submit").html('<div class="qdb-one-tips">您需先保存<a href="#qdb-shr">收货人信息</a>，再提交订单</div><input  type="button" class="qdb-one-subit"  value="确认支付">');
+            $("#qdb-shr").css("border","3px red solid");
+            $btnModiy.hide();
+            $btnSaveReceiver.show();
+
+            new PCAS("province","city","area");
+            $btnPay.attr("disabled",true);
+        }else{
+            $(".qdb-zffs-submit").html('<input type="button" id="btnPay" name="btnPay"  value="确认支付">');
+            $btnModiy.show();
+            $("#recevierForm input[type='text'],select").attr("disabled", true);
+            $btnSaveReceiver.hide();
+
+            new PCAS("province","city","area","北京市","市辖区","东城区");
+            $btnPay.attr("disabled",false);
+            btnpaymethod();
+        }
+
+        if(mScore==0){
+            $isPayByScore.attr("disabled",true);
+            $score.attr("disabled",true);
+        }else {
+            $isPayByScore.trigger("click");
+            $score.attr("disabled",false);
+        }
+        if(mScore < mGoodsScore*$buyNum.val()){
+            $score.val(mScore);
+        }else{
+            $score.val(mGoodsScore*$buyNum.val());
+        }
+
+        //判断库存
+        if ("200" ==0){
+            $btnPay.attr("disabled",true);
+            $buyNum.attr("disabled",true);
+        }
+
+        setMessage();
+
+    });
+
+    function setMessage(){
+
+        var payScore = $score.val();
+        var needMoney = $buyNum.val()*mGoodsPrice.toFixed(0);
+        var needPay;
+        if($isPayByScore.attr("checked")=="checked"){
+            needPay = needMoney-payScore;
+
+            if(needPay.toFixed(2)=="NaN"||needPay.toFixed(2)<0){
+                needPay=0;
+            }
+
+            $("#amount").html("积分"+payScore+"+￥"+needPay.toFixed(2));
+            if(mTransportCost>0){
+                needPay = needPay +mTransportCost;
+            }
+            $("#payment").html("积分"+payScore+"+￥"+needPay.toFixed(2));
+        }else{
+            needPay = needMoney;
+            $("#amount").html("￥"+needPay.toFixed(2));
+            if(mTransportCost>0){
+                needPay = needPay + mTransportCost;
+            }
+            $("#payment").html("￥"+needPay.toFixed(2));
+        }
+        $("#payMoney").val(needPay.toFixed(2));
+
+    }
+
+    $btnModiy.click(function(){
+        $("#qdb-shr").css("border","3px red solid");
+        $(this).hide();
+        $("#recevierForm input[type='text'],select").attr("disabled", false);
+        $btnSaveReceiver.show();
+        $btnPay.attr("disabled",true);
+        $(".qdb-zffs-submit").html('<div class="qdb-one-tips">您需先保存<a href="#qdb-shr">收货人信息</a>，再提交订单</div><input  type="button" class="qdb-one-subit"  value="确认支付">');
+        btnpaymethod();
+    });
+
+
+    $isPayByScore.click(function(){
+        if($(this).attr("checked")=="checked"){
+            $score.attr("disabled",false);
+        }else{
+            $score.attr("disabled",true);
+        }
+        setMessage();
+    });
+
+    $score.keyup(function(){
+        $(this).val($(this).val().replace(/\D/g,''));
+        if($(this).val()==0){
+            $(this).val("1");
+        }
+
+        var amountScore = $buyNum.val()*mGoodsScore;
+        if($score.val()>mScore){
+            $score.val(mScore);
+        }
+        if($score.val()>amountScore){
+            $score.val(amountScore);
+        }
+
+        setMessage();
+    });
+
+    $buyNum.keyup(function(){
+        $(this).val($(this).val().replace(/\D/g,''));
+        if($(this).val()==0){
+            $(this).val("1");
+        }
+
+        var amountScore = $buyNum.val()*mGoodsScore;
+        if($score.val()>mScore){
+            $score.val(mScore);
+        }
+        if($score.val()>amountScore){
+            $score.val(amountScore);
+        }
+
+        setMessage();
+    });
+
+    //手机号验证
+    $.validator.addMethod("isMobile", function(value, element) {
+        var length = value.length;
+        var mobile =  /^1[3|4|5|8][0-9]\d{4,8}$/;
+        return this.optional(element) || (length == 11 && mobile.test(value));
+    }, "手机号码格式错误");
+
+    // 电话号码验证
+    $.validator.addMethod("isPhone", function(value, element) {
+        var tel = /^(0[0-9]{2,3})?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$/;
+        return this.optional(element) || (tel.test(value));
+    }, "请填写正确的电话号码");
+
+    //注册表单验证
+    $("form[name='recevierForm']").validate({
+        groups: {
+            username: "mobile phone"
+        },
+        rules : {
+            name : {
+                required:true,
+                maxlength:20
+            },
+            area:{
+                required:true
+            },
+            address:{
+                required:true,
+                minlength:5,
+                maxlength:50
+            },
+            mobile:{
+                required: {
+                    depends:function(){
+                        return ($('input[name=phone]').val().length <= 0);
+                    }
+                },
+                isMobile:true
+            },
+            email:{
+                email:true
+            }
+        },
+        messages : {
+            name:{
+                required:"<font color='red'>请输入收货人姓名</font>",
+                maxlength:"<font color='red'>长度不能超过20个字符</font>"
+            },
+            area: {
+                required: "<font color='red'>请选择所在区域</font>"
+            },
+            address:{
+                required:"<font color='red'>请输入详细地址</font>",
+                minlength:"<font color='red'>长度为5到50个字符</font>",
+                maxlength:"<font color='red'>长度为5到50个字符</font>"
+            },
+            mobile:{
+                required:"<font color='red'>手机号码和固定电话必填其中一项</font>",
+                isMobile:"<font color='red'>请输入正确的手机号码</font>"
+            },
+            email:{
+                email: "<font color='red'>请输入正确的邮箱地址</font>"
+            }
+        },
+        submitHandler:function(form){
+            $btnSaveReceiver.attr("disabled",true);
+            $.ajax({
+                url:"/website/receiver/save.dhtml",
+                type:"post",
+                data:$("#recevierForm").serialize(),
+                dataType: "json",
+                success: function(data){
+                    if(data.result){
+                        $("#qdb-shr").css("border","0px");
+                        $(".qdb-zffs-submit").html('<input type="button" id="btnPay" name="btnPay"  value="确认支付">');
+                        btnpaymethod();
+                        window.setTimeout(function () { $.jBox.success('收货人信息保存成功', '友情提醒');}, 500);
+
+                        $("#recevierForm input[type='text'],select").attr("disabled", "true");
+                        $btnModiy.show();
+                        $btnSaveReceiver.hide();
+                        $("#id").val(data.message);
+
+                        if ("200" ==0){
+                            $btnPay.attr("disabled",true);
+                        }else{
+                            $btnPay.attr("disabled",false);
+                        }
+                    }else{
+                        alert("系统错误!");
+                    }
+                    $btnSaveReceiver.attr("disabled",false);
+                }
+            });
+        },
+        onfocusout: function(element) {
+            $(element).valid();
+        },
+        errorPlacement : function(error, element) {
+            error.appendTo(element.parent().next());
+        },
+        success : function(label) {
+            label.addClass("error checked");
+        }
+    });
+    function btnpaymethod(){
+        $("#btnPay").click(function() {
+            /*
+             if(window.confirm("您确定要购买商品好苹果第一在山东"+",支付"+$("#payment").html()+"吗？")){
+             }*/
+            $("#message").val(covertFromXmlTag($("#message").val()));
+            $("#orderForm").submit();
+
+        });
+    }
+
+
+
+    $('#qdb-use-list').hover(function(){
+        $('.qdb-header-btn').css('overflow','visible')
+        $('div.qdb-use-list a.on span').addClass('on');
+    },function(){
+        $('.qdb-header-btn').css('overflow','hidden')
+        $('div.qdb-use-list a.on span').removeClass('on');
+    });
+
+
+    $("#main").click(function(){
+        window.location= "/website/main/index.dhtml";
+    });
+    $("#memberskip").click(function(){
+        window.location= "/website/member/showControlCenter.dhtml";
+    });
+    $(".menulink").hover(function(){
+        $(".menuhide").css("display","block");
+    },function(){
+
+    });
+    $(".menuhide").hover(function(){
+
+    },function(){
+        $(this).css("display","none");
+    });
+	  
+	      $('#phone-qdb').hover(function(){
+	          $('.phone-qdbinfo').stop().slideDown(0);
+	      },function(){
+	          $('.phone-qdbinfo').stop().slideUp(200);
+	      });
+
+});
+//add by 熊猫 过滤HTML标签
+function covertFromXmlTag(value){
+    value = value.replace(/&/g,"&amp;");
+    value = value.replace( /</g,"&lt;");
+    value = value.replace(/>/g,"&gt;");
+    value = value.replace(/\\/g, "&quot;");
+    return value;
+}
+</script>
+
+<div id="topnav">
+    <div class="wbox clearfix" style="width: 990px;padding-right:20px;">
+        <ul class="topside" style="margin-top: 5px">
+            <li id="gome-group"><a title="去兑吧官网" target="_blank" href="http://115.29.246.132:8098/website/main/newIndex.dhtml" rel="nofollow">去兑吧官网</a></li>
+            <li class="linespace"></li>
+            <li id="phone-qdb" class="pr hd-mygome js-tophover" done=""><a target="_blank" href="javascript:void(0)">手机去兑吧</a>
+                <div class="phone-qdbinfo">
+                    <div class="app-block">
+                        <p class="app-block__title">微信订阅号</p>
+                        <span class="app-block__content"><img src="pic/wxdyh.jpg"></span>
+                    </div>
+                    <div class="app-block">
+                        <p class="app-block__title">微信服务号</p>
+                        <span class="app-block__content"><img src="pic/wxfwh.jpg"></span>
+                    </div>
+                    <div class="app-block">
+                        <p class="app-block__title">去兑吧</p>
+                        <span class="app-block__content"><img src="pic/qdbewm.png"></span>
+                    </div>
+                </div></li>
+
+        </ul>
+        <ul class="topmenu clearfix">
+            <li class="login-top" id="loginDiv"><span class="gwelcome">去兑吧在线欢迎您！
+！</span>
+                
+                
+                    13973318963   <a href="http://115.29.246.132:8098/website/member/logout.dhtml">退出</a>
+                </li>
+            <li class="linespace"></li>
+            <li class="g-myoder"><a href="http://115.29.246.132:8098/website/order/order_list.dhtml" rel="nofollow">我的订单</a></li>
+            <li id="homepageMyGome" class="pr hd-mygome js-tophover" done="" style="margin-top: -5px;"><a href="javascript:void(0)" class="menulink" rel="nofollow">我的去兑吧<b></b></a>
+                <div class="menuhide">
+                    <ul class="mygomeinfo clearfix">
+
+                        <li class="mygome-item item-line"><span class="itemlist-name">会员中心：</span>
+							<span class="mginfo"><a href="http://115.29.246.132:8098/website/order/order_list.dhtml" rel="nofollow">我的订单</a><span id="waitPay" class="highlight"></span></span>
+							<span class="mginfo"><a href="http://115.29.246.132:8098/website/member/toScoreList.dhtml" rel="nofollow">我的积分</a><span id="waitComm" class="highlight"></span></span></li>
+
+                        <li class="mygome-item"><span class="itemlist-name">&nbsp;</span>
+							<span class="mginfo"><a target="_blank" href="http://115.29.246.132:8098/website/member/showModifyPassword.dhtml" rel="nofollow">账户安全</a><span id="my-favorites" class="highlight"></span></span> <span class="mginfo"><a target="_blank" href="http://115.29.246.132:8098/website/member/showPwQuestion.dhtml" rel="nofollow">密保设置</a></span></li>
+                    </ul>
+                    <div class="topbrowsed" style="display: none;">
+                        <h3 class="tb-title">最近浏览的商品</h3>
+                        <ul id="topbrowsedprod">
+                        </ul>
+                    </div>
+                </div></li>
+            <li class="linespace"></li>
+
+
+            <li class="no-map"><a href="http://115.29.246.132:8098/mer/admin/merchant/open.dhtml" rel="nofollow" target="_blank"><span class="valign-inline">商家入驻</span></a></li>
+            <li class="no-map" id="menus-itemlast"><a href="http://115.29.246.132:8098/mer/admin/merchant/login.dhtml" rel="nofollow" target="_blank"><span class="valign-inline">商家登陆</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="wrap header" style="width: 100%;border-bottom: 2px solid #eeeeee;">
+    <div class="content" style="width: 1000px">
+        <div class="logo">
+            <h1><a href="http://115.29.246.132:8098/website/main/newIndex.dhtml"><img src="pic/logo.jpg"></a></h1>
+        </div>
+    </div>
+</div>
+
+<div class="qdb-content">
+    <div class="qdb-con-qr">
+		<img src="pic/u112.png">
+		<div class="qdb-qr-left">
+			<strong>确认订单</strong>
+        </div>
+    </div>
+    <div class="qdb-con-area">
+        <div id="qdb-shr" class="qdb-con-shr">
+            <div class="qdb-shr-title">
+                <strong>联系方式</strong>
+            </div>
+            <div class="qdb-shr-table">
+                <form novalidate="novalidate" id="recevierForm" name="recevierForm" method="post">
+                    <table>
+                        <tbody>
+							<tr>
+								<td class="shr-table-left"><em>*</em>手机号码：</td>
+								<td class="shr-table-right">
+									<span><input disabled="disabled" id="mobile" name="mobile" value="13973318963" maxlength="11" class="inputxt mobile" type="text"></span>
+									<span style="margin-left: 10px;font-style: normal;color: #c9c9c9;">将发送兑换券密码至手机号</span>
+								</td>
+							</tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+		
+        <form action="/website/order/saveOrder.dhtml" id="orderForm" name="orderForm" method="post">
+            <div class="qdb-con-ddxx">
+                <input name="goodsID" id="goodsID" value="37" type="hidden">
+                <input name="goodsName" id="goodsName" value="好苹果第一在山东" type="hidden">
+                <input name="goodsPrice" id="goodsPrice" value="120.00" type="hidden">
+                <input name="goodsScore" id="goodsScore" value="120" type="hidden">
+                <div class="qdb-shr-title">
+                    <strong>订单信息</strong>
+                </div>
+                <div class="qdb-ddxx-form">
+                    <div class="qdb-ddxx-bottom">
+                        <div class="qdb-ddxx-img"><a href="http://115.29.246.132:8098/website/goods/exchange.dhtml?id=37" target="_blank"><img src="pic/u92.png" alt=""></a></div>
+                        <div class="qdb-ddxx-list">
+                            <dl>
+                                <dd>
+                                    <span class="qdb-ddxx-jf"><strong>积分：</strong><em class="qdb-ddxx-num">120</em></span>
+									<span class="qdb-ddxx-price"><strong>单价：</strong><em class="qdb-ddxx-num">￥120.00</em></span>
+                                    <strong>数量：</strong>1
+                                    <input id="buyNum" name="buyNum" value="1" type="hidden"/>
+                                </dd>
+                                <dd>
+									<span class="qdb-psfs"><strong>配送方式：</strong>普通快递:￥1.20
+										<input name="transportCost" id="transportCost" value="1.20" type="hidden">
+									</span>
+									<span class="qdb-kczt"><strong>库存状态：</strong>有货</span>
+								</dd>
+                                <dd>给客服留言：<input class="qdb-ddxx-kfly" id="message" name="message" maxlength="120" type="text"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qdb-con-zffs">
+                <div class="qdb-shr-title">
+                    <strong>支付方式</strong>
+                </div>
+                <div class="qdb-zffs-table">
+                    <div class="qdb-zffs-title">
+						<input checked="checked" id="isPayByScore" name="isPayByScore" value="1" type="checkbox">
+						<label for="">积分支付</label>
+						<input id="payScore" name="payScore" class="qdb-zfbs-btn" value="120" type="text">
+                    </div>
+                    <div class="qdb-zffs-list">
+                        <ul class="qdb-zffs-left">
+                            <li>
+                                <strong>会员账户积分余额：</strong>
+								49562
+								&nbsp; &nbsp;(1积分=￥1.00)
+                            </li>
+                        </ul>
+                        <ul class="qdb-zffs-right">
+                            <li><strong>商品总额：</strong><span id="amount" style="color:#e4732f">积分120+￥0.00</span></li>
+                            <li style="color:#e4732f"><strong>运费：</strong>￥1.20</li>
+                            <li style="color:#FF4B00"><strong>应付总额：</strong><span id="payment" style="color:#e4732f">积分120+￥1.20</span></li>
+                        </ul>
+                    </div>
+                    <input value="1.20" name="payMoney" id="payMoney" type="hidden">
+                    <div class="qdb-zffs-submit"><input id="btnPay" name="btnPay" value="确认支付" type="button"></div>
+                </div>
+            </div>
+		</form>
+	</div>
+</div>
+
+<div class="footer wrap">
+    <div class="content foot">
+        <ul class="site">
+            <li>
+                <dl>
+                    <dt>平台简介</dt>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqOne.dhtml#qdbsm">去兑吧说明</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqOne.dhtml#wzsm">网站说明</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqOne.dhtml#jfsm">积分说明</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqOne.dhtml#dhgm">兑换或购买指南</a></dd>
+
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>会员中心</dt>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqTwo.dhtml#dhzn">兑换指南</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqTwo.dhtml#cjwt">常见问题</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqTwo.dhtml#hyxz">会员须知</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqTwo.dhtml#grxx">个人信息</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqTwo.dhtml#yhxy">用户协议</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>商家合作</dt>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqThree.dhtml#ptqz">平台圈子</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqThree.dhtml#hzxz">合作须知</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqThree.dhtml#hzlc">合作流程</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqThree.dhtml#hzxj">合作细节</a></dd>
+                    <dd><a href="http://115.29.246.132:8098/website/main/faqThree.dhtml#zsyw">招商业务合作</a></dd>
+                </dl>
+            </li>
+
+        </ul>
+        <p class="copyright">
+            热线电话：400-0077-331
+            ?2014 去兑吧：<a href="http://www.miibeian.gov.cn/">湘ICP备14009495号-1</a>
+        </p>
+    </div>
+</div>
+
+</body></html>
