@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>确认信息-兑生活</title>
+<title>订单详情-兑生活（制做）</title>
 <link href="css/reset1.css" rel="stylesheet" type="text/css" />
 <link href="css/h_b_c.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -53,9 +53,46 @@
 		overflow:hidden;
 		margin: 0 auto;
 		width: 923px;
-		padding-bottom: 30px;
-		padding-top: 20px;
+		padding-bottom: 5px;
+		padding-top: 15px;
 	}
+	.main_shrxx_body span{
+		height:24px;
+		margin:10 26px;
+		}
+	.main_shrxx_body div{
+		height:24px;
+		margin:10 26px;
+		}
+	.main_shrxx_body div span{
+		height:24px;
+		margin-left:14px;
+	}
+	.main_shraa span{
+		font-family: microsoft yahei;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.main_shraa{
+		height: 60px;
+		line-height: 60px;
+		margin: 0 auto;
+		width: 923px;
+	}
+	.main_shraa_body{
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+		padding:8px 0 6px;
+		background-color:#feeee7; 
+	}
+	.main_shraa_body div{
+		padding:5 26px;
+	}
+	.use{
+		color: #ff0000;
+		}
 	.xxtable{
 		color: #666;
 	}
@@ -68,21 +105,22 @@
 		text-align:right;
 	}
 	.main_ddxx{
-		border-bottom: 1px dashed #f1f1f1;
 		height: auto;
 		overflow:hidden;
 		margin: 0 auto;
 		width: 923px;
 		padding-bottom: 30px;
-		padding-top: 20px;
+		padding-top: 10px;
+		
 	}
 	.main_ddxx_title{
 		width:923px;
-		height:40px;
+		height:45px;
 		line-height:40px;
 		font-family: microsoft yahei;
 		font-weight: bold;
 		font-size:18px;
+		border-bottom: 1px dashed #f1f1f1;
 	}
 	.main_ddxx_body{
 		height: auto;
@@ -90,16 +128,35 @@
 		margin: 0 auto;
 		width: 923px;
 	}
+	.main_ddxx_body_conten1{
+		font-family: microsoft yahei;
+		font-size:12px;
+		width:210px;
+		height:30px;
+		line-height:35px;
+		padding-left: 26px;
+		float:left;	
+	}
+	.main_ddxx_body_conten2{
+		font-family: microsoft yahei;
+		font-size:12px;
+		width:210px;
+		height:30px;
+		line-height:35px;
+		padding-left: 26px;
+		float:left;	
+	}
 	.main_ddxx_body_title{
 		font-family: microsoft yahei;
 		font-size:12px;
-		width:335px;
-		height:35px;
+		width:410px;
+		height:31px;
 		line-height:35px;
 		text-align:center;
 		float:left;
-		border-bottom:3px solid #FEBEA4;
-		margin-right:3px;
+		background-color: #FDD9CA;
+		margin-top: 12px;
+		
 	}
 	.main_ddxx_body_xx{
 		height: auto;
@@ -107,17 +164,27 @@
 		padding: 10px;
 		width: 923px;
 		float:left;
+		border:1px solid #FFF6F1;
 	}
 	.main_ddxx_body_pri{
-		width:143px;
+		width:169px;
 		height:85px;
 		line-height:85px;
 		float:left;
 		font-family:microsoft yahei;
 		text-align:center;
 		font-size:12px;
-		margin-left:3px;
+		border:1px solid #feeee7;
 	}
+	#hh{
+		color: #36F;
+		}
+	#bb{
+		color:#999;
+		}
+	.table_cass{
+		font-size:12px;
+		}
 	.main_zhifu{
 		font-family: microsoft yahei;
 		font-weight: bold;
@@ -143,9 +210,9 @@
 		font-size: 12px;
 		height: auto;
 		overflow: hidden;
-		padding: 30px 0;
+		padding-bottom:40px;
 		width: auto;
-		margin-right:20px;
+		margin-right:28px;
 	}
 	.main_tijiao tr {
 		line-height: 25px;
@@ -245,7 +312,7 @@
 <!--**************************************-->
 	<div class="main">
 		<div class="main_title">
-			<span>确认订单</span>
+			<span>订单详情</span>
 		</div>
 		<div class="main_shrxx">
 			<span>
@@ -253,68 +320,70 @@
             </span>
 		</div> 
 		<div class="main_shrxx_body">
-        <span><font color="red"></font>卖家留言：XXX商品请帮我发2个红色的，记得是2个哦，谢谢！
-        </span>
-        <div>
-        	<input type="submit" style="width:70px;height:23px;font-weight: bold;color:#ffffff;background:#FF4B00;border-radius:5px;font-family:microsoft 					             yahei;font-size:12px;border:1px solid #FF4B00;cursor: pointer;margin-top:15px;" value="去支付">
-		 <span ><font style="color:#36F; ">取消订单</font></span>	
-         </div>
+       		 <span><font color="red"></font>卖家留言：XXX商品请帮我发2个红色的，记得是2个哦，谢谢！
+       		 </span>
+        	<div >
+            <input type="submit" style="width:70px;height:23px;color:#ffffff;background:#FF4B00;border-radius:4px;                            font-family:microsoft yahei;font-size:12px;border:1px solid #FF4B00;cursor: pointer;" value="去支付">
+            <span><a href="#"><font style="color:#36F;">取消订单</font></a></span>	
+         	</div>
 		</div>
+        <div class="main_shraa">
+			<span>
+                兑换卷
+            </span>
+		</div> 
+		<div class="main_shraa_body">
+       		 <div><span><font color="red"></font>小提示：记下或拍下兑换券密码向商家出示即可消费，无需等待短信。</span></div>
+             <div>兑换券密码：<span><font style="color:#36F">0000 9903 4368</font></span><span class="use">&nbsp;&nbsp;待使用</span>
+             </div>
+		</div>
+        
 		<div class="main_ddxx">
 			<div class="main_ddxx_title">
 				订单信息
 			</div>
+            <div>
+				
+                <table style="border-width: 0px; padding: 0px; margin: 0px; border-spacing: 0px; border-collapse: collapse;">
+                <tr>
+                <td> <div class="main_ddxx_body_conten1" >订单编号：<span id="hh">1410813498456</span></div></td>
+                <td><div class="main_ddxx_body_conten1">支付方式：<span id="hh">积分支付</span></div></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td><div class="main_ddxx_body_conten2">下单时间：<span id="bb">2014-04-11 21：22</span></div></td>
+                <td><div class="main_ddxx_body_conten2">支付时间：<span id="bb">2014-04-11 21：22</span></div></td>
+                <td><div class="main_ddxx_body_conten2">支付时间：<span id="bb">2014-04-11 21：22</span></div></td>
+                </tr>
+                </table>    
+                
+               
+			</div>    
 			<div class="main_ddxx_body">
-				<div class="main_ddxx_body_title">商品信息</div>
-				<div class="main_ddxx_body_title" style="width:143px;">价格</div>
-				<div class="main_ddxx_body_title" style="width:143px;">积分</div>
-				<div class="main_ddxx_body_title" style="width:143px;">数量</div>
-				<div class="main_ddxx_body_title" style="width:143px;">小计</div>
+                    <div class="main_ddxx_body_title">商品信息</div>
+                    <div class="main_ddxx_body_title" style="width:171px;">价格</div>
+                    <div class="main_ddxx_body_title" style="width:171px;">积分</div>
+                    <div class="main_ddxx_body_title" style="width:171px;">数量</div>
+                
+                
+                    <div class="main_ddxx_body_xx" style="width:388px; height:65px;">
+                        <img src="pic/u40.png" style="width:76px;height:62px;float:left;">
+                        <div style="width: 268px;float:left;font-size:12px;font-family:microsoft yahei;padding:5px;">不锈钢单杆晾衣架 落地折叠晾晒架升降晾衣架
+                        </div>
+                    </div>
+                 
+                    <div class="main_ddxx_body_pri">￥2000.00</div>
+                    <div class="main_ddxx_body_pri">2000</div>
+                    <div class="main_ddxx_body_pri">2</div>
 				
-				<div class="main_ddxx_body_xx" style="width:315px;">
-					<img src="pic/u40.png" style="width:76px;height:62px;float:left;">
-					<div style="width: 225px;float:left;font-size:12px;font-family:microsoft yahei;padding:5px;">不锈钢单杆晾衣架 落地折叠晾晒架 升降晾衣架</div>
-				</div>
-				<div class="main_ddxx_body_pri">￥2000.00</div>
-				<div class="main_ddxx_body_pri">2000</div>
-				<div class="main_ddxx_body_pri">
-					<div style="width:70px;height:25px;border:1px solid #FFBFA4;margin-left: 16px;margin-top: 28px;margin-left:35px">
-						<div id="qdb-sell-reduce" style="width:19px;height:25px;line-height:25px;float:left;border-right:1px solid #FFBFA4;background:#FEF0E7;cursor:pointer;">-</div>
-						<div id="qdb-sell-txt" style="width:30px;height:25px;line-height:25px;float:left;">1</div>
-						<div id="qdb-sell-add" style="width:19px;height:25px;line-height:25px;float:left;border-left:1px solid #FFBFA4;background:#FEF0E7;cursor:pointer;">+</div>
-					</div>
-				</div>
-				<div class="main_ddxx_body_pri">￥2000.00</div>
 				
-			</div>
-			<div id="tips_parent" style="width:923px;height:40px;line-height:40px;background:#FEEFE9;border-top:3px solid #FFBFA4;">
-				<span style="font-size:12px;font-family:microsoft yahei;color:red;padding-left:30px;">给客服留言：</span><textArea id="tips" style="width:465px;height:20px;line-height:20px;border:1px solid #CCCCCC;border-radius:4px;text-indent:10px;color:#777777;margin-top: 10px; position: absolute;resize:none;font-size:12px;" placeholder="如需按指定商品颜色、尺码、规格等属性 请留言说明，否则随机发货。"></textArea>
-			</div>
-		</div>
-		<div class="main_ddxx" style="padding-bottom:0;">
-			<div class="main_zhifu">
-				支付方式
-			</div>
-			<div class="main_zhifu_p">
-				<p>
-					<input type="checkbox" name=""/>&nbsp;<span style="font-size:14px;">积分支付</span>
-					<input type="text" name="" style="width:150px;height:30px;margin-left:10px;font-size: 16px;"/>
-				</p>
-				<strong>
-					会员账户积分余额：88897（1积分=￥1.00）
-				</strong>
 			</div>
 		</div>
 		<div class="main_tijiao">
-			<table>
+			<table width: 180px;>
+           		 <tr>
 					<td class="main_tijiao_td" style="color: #5e5e5e;font-size: 14px;text-align: right;font-weight:normal;">应付总额：</td>
 					<td><span style="color: #c00;font-size: 21px;">积分12+￥1.00</span></td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>
-						<input type="submit" value="确认支付" style="width:175px;height:35px;font-weight: bold;color:#ffffff;background:#FF4B00;border-radius:5px;font-family:microsoft yahei;font-size:17px;border:1px solid #FF4B00;cursor: pointer;margin-top:48px;">
-					</td>
 				</tr>
 			</table>
 		</div>
