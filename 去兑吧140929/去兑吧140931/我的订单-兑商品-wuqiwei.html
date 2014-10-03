@@ -1,0 +1,408 @@
+<html>
+<head>
+<title>我的订单-兑商品</title>
+<link href="css/reset1.css" rel="stylesheet" type="text/css" />
+<link href="css/h_b_c.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+	body{
+		margin:0;
+		padding:0;
+		overflow:auto;
+	}
+	a{
+		text-decoration:none;
+	}
+	.main{
+		width:980px;
+		height:auto;
+		margin:30px auto 30px;
+		overflow:hidden;
+		border:1px solid #D6D6D6;
+		border-radius:4px;
+	}
+	.main_title{
+		background:url(pic/u112.png);
+		width:980px;
+		height:50px;
+		line-height:50px;
+	}
+	.main_title span{
+		color: red;
+		font-family: microsoft yahei;
+		font-size: 20px;
+		font-weight: bold;
+		padding-left:30px;
+	}
+	.main_shrxx{
+		border-bottom: 1px dashed #f1f1f1;
+		height: 80px;
+		line-height: 100px;
+		margin: 0 auto;
+		width: 923px;
+	}
+	.main_shrxx span{
+		font-family: microsoft yahei;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.main_shrxx_body{
+		border-bottom: 1px dashed #f1f1f1;
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+		padding-bottom: 30px;
+		padding-top: 20px;
+	}
+	.xxtable{
+		color: #666;
+	}
+	.xxtable tr {
+		line-height: 35px;
+	}
+	.xx{
+		font-family: microsoft yahei;
+		font-size: 12px;
+		text-align:right;
+	}
+	.main_ddxx{
+		border-bottom: 1px dashed #f1f1f1;
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+		padding-bottom: 30px;
+		padding-top: 20px;
+	}
+	.main_ddxx_title{
+		width:923px;
+		height:40px;
+		line-height:40px;
+		font-family: microsoft yahei;
+		font-weight: bold;
+		font-size:18px;
+	}
+	.main_ddxx_body{
+		height: auto;
+		overflow:hidden;
+		margin: 0 auto;
+		width: 923px;
+	}
+	.main_ddxx_body_title{
+		font-family: microsoft yahei;
+		font-size:12px;
+		width:335px;
+		height:35px;
+		line-height:35px;
+		text-align:center;
+		float:left;
+		border-bottom:3px solid #FEBEA4;
+		margin-right:3px;
+	}
+	.main_ddxx_body_xx{
+		height: auto;
+		overflow: hidden;
+		padding: 10px;
+		width: 923px;
+		float:left;
+	}
+	.main_ddxx_body_pri{
+		width:143px;
+		height:85px;
+		line-height:85px;
+		float:left;
+		font-family:microsoft yahei;
+		text-align:center;
+		font-size:12px;
+		margin-left:3px;
+	}
+	.main_zhifu{
+		font-family: microsoft yahei;
+		font-weight: bold;
+		height: 40px;
+		line-height: 40px;
+		width: 923px;
+		font-size:18px;
+	}
+	.main_zhifu_p{
+		font-family: microsoft yahei;
+		font-size: 12px;
+		line-height: 40px;
+		width: 923px; 
+		height: auto; 
+		overflow: hidden;
+		padding: 15px 0 0;
+		border-top: 1px dashed #f1f1f1;
+		border-bottom: 1px dashed #f1f1f1;
+	}
+	.main_tijiao{
+		float: right;
+		font-family: microsoft yahei;
+		font-size: 12px;
+		height: auto;
+		overflow: hidden;
+		padding: 30px 0;
+		width: auto;
+		margin-right:20px;
+	}
+	.main_tijiao tr {
+		line-height: 25px;
+	}
+	.main_tijiao_td {
+		color: #555;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: right;
+	}
+	.main_tijiao span {
+		color: red;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	input[type='text']{
+		border:1px solid #cccccc;
+		border-radius: 3px;
+		text-indent:4px;
+	}
+	input[type='text']:hover{
+		border:1px solid #33cccc;
+	}
+	input[type='submit']:hover{
+		opacity:0.8;
+	}
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<!--**************************************-->
+<div id="topnav" style="margin-top: -5px;">
+    <div style="width: 990px;padding-right:20px;" class="wbox clearfix">
+        <ul style="margin-top: 5px" class="topside">
+            <li id="gome-group"><a rel="nofollow" href="/website/main/newIndex.dhtml" target="_blank" title="去兑吧官网">去兑吧官网</a></li>
+            <li class="linespace"></li>
+            <li done="" class="pr hd-mygome js-tophover" id="phone-qdb"><a href="javascript:void(0)" target="_blank">手机去兑吧</a>
+                <div class="phone-qdbinfo" style="display: none; overflow: hidden; height: 120px; margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px;">
+                    <div class="app-block">
+                        <p class="app-block__title">微信订阅号</p>
+                        <span class="app-block__content"><img src="pic/wxdyh.jpg"></span>
+                    </div>
+                    <div class="app-block">
+                        <p class="app-block__title">微信服务号</p>
+                        <span class="app-block__content"><img src="pic/wxfwh.jpg"></span>
+                    </div>
+                    <div class="app-block">
+                        <p class="app-block__title">去兑吧</p>
+                        <span class="app-block__content"><img src="pic/qdbewm.png"></span>
+                    </div>
+                </div></li>
+
+        </ul>
+        <ul class="topmenu clearfix">
+            <li id="loginDiv" class="login-top"><span class="gwelcome">去兑吧在线欢迎您！！</span><a class="glogin" rel="nofollow" href="/website/member/skipLogin.dhtml">请登录</a><a class="gsign" rel="nofollow" href="/website/member/skipRegister.dhtml">免费注册</a>
+                </li>
+            <li class="linespace"></li>
+            <li class="g-myoder"><a rel="nofollow" href="/website/order/order_list.dhtml">我的订单</a></li>
+            <li done="" class="pr hd-mygome js-tophover" id="homepageMyGome"><a rel="nofollow" class="menulink" href="javascript:void(0)">我的去兑吧<b></b></a>
+                <div class="menuhide" style="display: none;">
+                    <ul class="mygomeinfo clearfix">
+
+                        <li class="mygome-item item-line"><span class="itemlist-name">会员中心：</span>
+							<span class="mginfo"><a rel="nofollow" href="/website/order/order_list.dhtml">我的订单</a><span class="highlight" id="waitPay"></span></span>
+							<span class="mginfo"><a rel="nofollow" href="/website/member/toScoreList.dhtml">我的积分</a><span class="highlight" id="waitComm"></span></span></li>
+
+                        <li class="mygome-item"><span class="itemlist-name">&nbsp;</span>
+							<span class="mginfo"><a rel="nofollow" href="/website/member/showModifyPassword.dhtml" target="_blank">账户安全</a><span class="highlight" id="my-favorites"></span></span> <span class="mginfo"><a rel="nofollow" href="/website/member/showPwQuestion.dhtml" target="_blank">密保设置</a></span></li>
+                    </ul>
+                    <div style="display: none;" class="topbrowsed">
+                        <h3 class="tb-title">最近浏览的商品</h3>
+                        <ul id="topbrowsedprod">
+                        </ul>
+                    </div>
+                </div></li>
+            <li class="linespace"></li>
+
+
+            <li class="no-map"><a target="_blank" rel="nofollow" href="/mer/admin/merchant/open.dhtml"><span class="valign-inline">商家入驻</span></a></li>
+            <li id="menus-itemlast" class="no-map"><a target="_blank" rel="nofollow" href="/mer/admin/merchant/login.dhtml"><span class="valign-inline">商家登陆</span></a></li>
+        </ul>
+    </div>
+</div>
+<!--**************************************-->
+<div style="width: 100%;background-color: #fff;border-bottom: 2px solid #eeeeee;" class="wrap header">
+    <div style="width: 1000px" class="content">
+        <div class="logo">
+            <h1><a href="/website/main/newIndex.dhtml"><img src="pic/logo.jpg"></a></h1>
+        </div>
+       
+        <div class="header-btn">
+
+        </div>
+    </div>
+</div>
+<!--**************************************-->
+	<div class="main">
+		<div class="main_title">
+			<span>详情订单</span>
+		</div>
+			<div id="main_content">
+				<img src="pic/yes-confirm.png"/>
+				<div style="font-family:'Applied Font Regular', 'Applied Font';" id="time-status">
+				  <span style="margin-left:90px;">2014-04-11 21:22</span><span style="margin-left:130px;">2014-04-11 21:22</span>
+				  <span style="margin-left:135px;">2014-04-11 21:22</span><span style="margin-left:130px;">2014-04-11 21:22</span>
+				 </div>
+				<div style="font-size:20px;font-family:'Applied Font Bold', 'Applied Font';margin:30px 0px 0px 30px;font-weight:bold">
+					<span>当前订单状态:</span><span style="color:#FF002A">待收货</span>
+				</div>
+				<div style="border-bottom:1px dashed #CCC;margin-top:20px;width:920px;margin-left:30px;"></div>
+				<div style="margin-top:15px; margin-left:50px;">
+					<div>卖家留言：XXX商品请帮我发2个红色的，记得是2个哦，谢谢！</div>
+					<div style="margin-top:15px;float:left;border-radius:3px;width:75px;height:20px;background-color:#FF4B00;color:white;text-align:center;font-family:'Applied Font Regular', 'Applied Font';line-height:20px;">确认收货</div>
+					<div style="margin-left:100px;margin-top:19px;color:#3366FF">退款/退货</div>
+				</div>
+				<div style="border-bottom:1px dashed #CCC;margin-top:20px;width:920px;margin-left:30px;"></div>
+				<div style="font-family:'Applied Font Bold', 'Applied Font';font-weight:bold;font-size:20px;margin-left:30px;margin-top:20px;">物流信息</div>
+				<div style="border-bottom:1px dashed #CCC;margin-top:10px;width:920px;margin-left:30px;"></div>
+				<div style="font-family:'Applied Font Regular', 'Applied Font';color:#1E1E1E;margin-left:50px;">
+				  <div style="margin-top:15px;"><span>收货地址：</span><span>陈列品，13973350446，07332288997745，湖南省株洲市芦淞区推荐遥遥月</span></div>
+				  <div style="margin-top:12px;"><span>配送方式：</span><span>快递 免邮</span></div>
+				  <div style="margin-top:12px;"><span>物流查询：</span><span style="color:#3366FF">中通快递</span><span style="margin-left:150px;">运单号：</span><span style="color:#3366FF">868707700374</span></div>
+				</div>
+				<div style="border-bottom:1px dashed #CCC;margin-top:20px;width:920px;margin-left:30px;"></div>
+				<div id="u91" style="margin-top:10px;">
+					 <span style="font-family:'Applied Font Bold', 'Applied Font';font-weight:bold;font-size:20px;margin-left:30px;">订单信息</span>
+				</div>
+				<div style="border-bottom:1px dashed #CCC;margin-top:10px;width:920px;margin-left:30px;"></div>
+				<div style="margin-left:30px;">
+					<div style="margin-top:12px;">
+						<span>订单编号：</span>
+						<span style="color:#3366FF">1410813498456</span>
+						<span style="margin-left:150px;">支付方式：</span>
+						<span style="color:#3366FF">积分支付</span>
+					</div>
+					<div style="margin-top:15px; width:920px;height:30px;background-color:#FDD9CA;">
+						<span style="margin-left:190px; line-height:30px;">商品</span>
+						<span style="margin-left:270px;">价格</span>
+						<span style="margin-left:140px;">积分</span>
+						<span style="margin-left:140px;">数量</span>
+					</div>
+					<div>
+						<div style="float:left;width:400px;border:1px solid #FFF6F1;height:80px;padding-top:10px;">
+							<img style="float:left;" src="http://cdn.iciba.com/web/static/images/beauty.gif" width="80px" height="60px"><span>不锈钢单杆晾衣架 落地折叠晾晒架 升降晾衣架</span>
+						</div>
+						<div style="float:left;width:170px;border:1px solid #FFF6F1;height:80px;text-align:center;line-height:75px;">3360</div>
+						<div style="float:left;width:170px;border:1px solid #FFF6F1;height:80px;text-align:center;line-height:75px;">876</div>
+						<div style="float:left;width:172px;border:1px solid #FFF6F1;height:80px;text-align:center;line-height:75px;">2</div>
+					</div>
+				</div>
+				<div style="margin-top:35px;float:right;margin-right:40px;margin-bottom:35px;">
+					<span style="font-family:'Applied Font Regular', 'Applied Font';font-weight:400;font-size:14px;color:#000000;">合计:</span>
+					<span style="color:#E5532D;font-family:'Applied Font Bold', 'Applied Font';font-weight:700;font-size:21px;color:#CC0000;">积分：</span>
+					<span style="color:#E5532D;font-family:'Applied Font Bold', 'Applied Font';font-weight:700;font-size:21px;color:#CC0000;">20+￥23.00</span>
+			    </div>
+	</div>
+		</div>
+		</div>
+		
+	<!--**********************begin:尾部*************************-->
+<div class="footer wrap">
+    <div class="content foot">
+        <ul class="site">
+            <li>
+                <dl>
+                    <dt>平台简介</dt>
+                    <dd><a href="/website/main/faqOne.dhtml#qdbsm">去兑吧说明</a></dd>
+                    <dd><a href="/website/main/faqOne.dhtml#wzsm">网站说明</a></dd>
+                    <dd><a href="/website/main/faqOne.dhtml#jfsm">积分说明</a></dd>
+                    <dd><a href="/website/main/faqOne.dhtml#dhgm">兑换或购买指南</a></dd>
+
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>会员中心</dt>
+                    <dd><a href="/website/main/faqTwo.dhtml#dhzn">兑换指南</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#cjwt">常见问题</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#hyxz">会员须知</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#grxx">个人信息</a></dd>
+                    <dd><a href="/website/main/faqTwo.dhtml#yhxy">用户协议</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>商家合作</dt>
+                    <dd><a href="/website/main/faqThree.dhtml#ptqz">平台圈子</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#hzxz">合作须知</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#hzlc">合作流程</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#hzxj">合作细节</a></dd>
+                    <dd><a href="/website/main/faqThree.dhtml#zsyw">招商业务合作</a></dd>
+                </dl>
+            </li>
+
+        </ul>
+        <p class="copyright">
+            热线电话：400-0077-331
+            ?2014 去兑吧：<a href="http://www.miibeian.gov.cn/">湘ICP备14009495号-1</a>
+        </p>
+    </div>
+</div>
+<!--***********************end:尾部************************-->
+	<script type="text/javascript">
+		 $().ready(function(){
+			 
+			$("#qdb-sell-add").bind('click',function(){
+				
+				if(parseInt($("#qdb-sell-txt").text())>=199){
+					$("#qdb-sell-txt").val(199);
+				}else{
+					var res=parseInt($("#qdb-sell-txt").text())+1;
+					$("#qdb-sell-txt").text(res);
+				}
+			});
+			 $("#qdb-sell-reduce").bind('click',function(){
+				
+				if(parseInt($("#qdb-sell-txt").text())<=1){
+					$("#qdb-sell-txt").text(1);
+				}else{
+					var res=parseInt($("#qdb-sell-txt").text())-1;
+					$("#qdb-sell-txt").text(res);
+				}
+			});
+
+			$("#tips").mouseover(function(){
+				$("#tips_parent").css("height","70px");
+				$(this).css("height","50px");
+			});
+			
+			$("#tips").mouseout(function(){
+				//alert($("#tips").val());
+				if($("#tips").val() ==""){
+					$("#tips_parent").css("height","40px");
+					$(this).css("height","20px");
+				}
+				
+			});
+			 $('#phone-qdb').hover(function(){
+				  $('.phone-qdbinfo').stop().slideDown(0);
+			  },function(){
+				  $('.phone-qdbinfo').stop().slideUp(200);
+			  });
+			   $(".menulink").hover(function(){
+					$(".menuhide").css("display","block");
+				},function(){
+
+				});
+				 $(".menuhide").hover(function(){
+
+				},function(){
+					$(this).css("display","none");
+				});
+				$("input[type='text']").focus(function(){
+					$(this).css("border","1px solid #33cccc");
+				});
+				
+		 });
+	</script>
+</body>
+</html>
